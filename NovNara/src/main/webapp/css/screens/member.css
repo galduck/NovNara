@@ -1,0 +1,32 @@
+.huge-sign-up-box{
+ 	display: flex;
+ 	justify-content: center;
+ 	margin-top: -100px;
+}
+
+.big-sign-up-box{
+	margin: 100x 0px ;
+}
+
+.h1_title{
+	color: gray;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 20px;
+}
+
+.sign-up{
+    margin: 5px;
+}
+
+.button-box{
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	margin:10px;
+}
+
+.sign-up-btn{
+	font-size:13px;
+	padding: 10px 30px;
+}

@@ -1,0 +1,96 @@
+@import "reset.css";
+@import "variables.css";
+
+
+body {
+  display: flex;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 10px 70px 10px;
+}
+
+.member-buttons{
+    display: flex;
+    justify-content: right;
+}
+
+.login{
+    border-radius : 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.sign-up{
+    border-radius : 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.giant-box{
+    height: 50vh;
+   
+}
+
+.oatmeal-box{
+    background-color: var(--oatmeal);
+    height: 300px;
+    padding: 10px;
+}
+
+.nav-icons{
+    display: flex;
+    justify-content: right
+}
+
+.login{
+    border: darkgray;
+}
+
+.sign-up{
+    border: darkgray;
+}
+.nav-icons .fas{
+    padding: 30px 15px;
+    color: darkgray;
+}
+
+.toggle_button{
+	cursor:pointer;
+	display:block;
+}
+
+#toggle_button,
+#toggle_contents{
+	overflow: hidden;
+} 
+
+.logo-box{
+    display: flex;
+    justify-content: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+    font-weight: bolder;
+    color: darkgray ;
+    padding: 70px 0px 0px 0px;
+}
+.search-box{
+
+}
+
+.search{
+    background-color: whitesmoke;
+    width: auto;
+    height: 50px;
+    border-radius: 20px;
+    margin: 70px 30px 0px 30px;
+    display: flex;
+    justify-content: right;
+}
+
+.search .fas{
+    padding: 10px 20px;
+}

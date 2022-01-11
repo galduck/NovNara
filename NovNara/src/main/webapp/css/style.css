@@ -1,0 +1,16 @@
+@import "reset.css";
+@import "variables.css";
+
+/* components */
+@import "components/top.css";
+
+/* Screens */
+@import "screens/member.css";
+@import "screens/login.css";
+
+/* set as a default */
+body {
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 10px 70px 10px;
+}

@@ -1,0 +1,84 @@
+.body{
+    display: flex;
+}
+
+.member-buttons{
+    display: flex;
+    justify-content: right;
+}
+
+.btn{
+	border: none;
+	border-radius : 5px;
+    padding: 10px 30px;
+    margin: 5px;
+}
+
+.input{
+	border: 1px solid  gray ;
+	font-size: 15px;
+	padding: 5px 20px;
+}
+
+.giant-box{
+    height: 50vh;
+}
+
+.oatmeal-box{
+    background-color: var(--oatmeal);
+    height: 300px;
+    padding: 10px;
+}
+
+.nav-icons{
+    display: flex;
+    justify-content: right
+}
+
+
+.nav-icons .fas{
+    padding: 30px 15px;
+    color: darkgray;
+}
+
+.toggle_button{
+	cursor:pointer;
+	display:block;
+}
+
+#toggle_button,
+#toggle_contents{
+	overflow: hidden;
+} 
+
+.logo-box{
+    display: flex;
+    justify-content: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+    font-weight: bolder;
+    color: darkgray ;
+    padding: 70px 0px 0px 0px;
+}
+
+.search-box{
+
+}
+
+.search{
+    background-color: whitesmoke;
+    width: auto;
+    height: 50px;
+    border-radius: 20px;
+    margin: 70px 30px 0px 30px;
+    display: flex;
+    justify-content: right;
+}
+
+.search .fas{
+    padding: 10px 20px;
+}
