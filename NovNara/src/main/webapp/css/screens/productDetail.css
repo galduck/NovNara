@@ -20,36 +20,29 @@ td {
 	align-items: center;	
 }
 
-.product-detail-form{
-}
-.product-detail-table{
-		
-	
-}
-
-.product-detail-tr{
-}
-
-
-.product-detail-tr:first-child{
-
-	
-}
 
 .product-name_product-detail{
 	font-size: 30px;
 	font-weight: bold;
+	padding: -1000px 0px 0px 0px;
 	
 }
 
-.product-detail-img{
-	padding: 100px 100px 0px 100px; 
+.product-detail-table{
+	border:1px solid black;
+}
+
+.product-detail-table-tr{
+		border:1px solid black;
+}
+
+.product-detail-table-td{
+			border:1px solid black;
 }
 
 .put-in-the-cart{
 	justify-content: center;
 	align-items: center;
-
 }
 
 .DetailDetail{

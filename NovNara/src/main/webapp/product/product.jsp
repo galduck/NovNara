@@ -22,7 +22,7 @@
 						ProductBean pbean = pvlist.get(i);
 		%>
 		<div class="total_product">
-			<a href="../product/productDetail.jsp?no=('<%=pbean.getNo() %>')">
+			<a href="../product/productDetail.jsp?no=<%=pbean.getNo() %>">
 			<div class="total_product_div total_product_img" >					
 				<img src="../img/<%=pbean.getImage() %>" height="380px" width="430px" >
 			</div>
