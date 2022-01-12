@@ -1,0 +1,24 @@
+
+.total_product_cover{
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 1000px;
+}
+	
+.total_product{
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	margin: 30px;
+}
+
+.total_product_div{
+	padding: 5px;
+	font-weight: bold;
+}
+
+.total_product_img{
+	overflow: hidden;
+}

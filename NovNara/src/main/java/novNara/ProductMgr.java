@@ -33,7 +33,7 @@ public class ProductMgr {
 		Vector<ProductBean> vlist = new Vector<ProductBean>();
 		try {
 			con = pool.getConnection();
-			sql = "select no, name, price, date, stock from tblProduct "
+			sql = "select no, name, price, date, stock, image from tblProduct "
 					+ "order by no desc";
 			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
@@ -44,6 +44,7 @@ public class ProductMgr {
 				bean.setPrice(rs.getInt(3));
 				bean.setDate(rs.getString(4));
 				bean.setStock(rs.getInt(5));
+				bean.setImage(rs.getString(6));
 				vlist.addElement(bean);
 			}
 		} catch (Exception e) {
