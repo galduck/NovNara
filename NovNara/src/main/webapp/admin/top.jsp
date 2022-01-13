@@ -6,8 +6,8 @@
 		response.sendRedirect("adminLogin.jsp");
 	}
 %>
-<table width="75%" align="center" bgcolor="#FFFF99">
-  <tr bgcolor="#FFCC00"> 
+<table width="75%" align="center">
+  <tr> 
     <th><a href="../index.jsp">홈</a></th>
     <th><a href="adminLogout.jsp">로그아웃</a></th>
     <th><a href="memberMgr.jsp">회원관리</a></th>

@@ -1,36 +1,35 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<!DOCTYPE html>
+<% request.setCharacterEncoding("UTF-8"); %>
 <html>
 <head>
-<title>관리자 로그인</title>
-<link href="../style.css" rel="stylesheet" type="text/css">
+<title>NovNara</title>
+<link rel="stylesheet" href="../css/style.css" />
+<script src="script.js"></script>
 </head>
-<body bgcolor="#996600" topmargin="100">
-	<table width="75%" align="center" bgcolor="#FFFF99">
-	<tr bordercolor="#FFFF99">  
-	<td height="190">
-		<form method="post" action="adminLoginProc.jsp">
-		<table width="50%" border="1" align="center">
-		<tr bordercolor="#FFFF66"> 
-		<td colspan="2" align="center">관리자 로그인</td>
-		</tr>
-		<tr  align="center"> 
-		<td width="47%">Admin ID</td>
-		<td width="53%"><input name="admin_id" value="admin"></td>
-		</tr>
-		<tr align="center"> 
-		<td>Admin Password</td>
-		<td><input name="admin_pwd" value="1234"></td>
-		</tr>
-		<tr> 
-		<td colspan="2" align="center"><input type="submit" value="login">
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-		<input type="reset" value="reset">
-		</td>
-		</tr>
-		</table>
-		</form>	
-	</td>
-	</tr>
-	</table>
+<body >
+	<%@ include file="../top.jsp"%>
+<div class="huge-sign-up-box">
+<form class=sign-up-form method="post" action="./adminLoginProc.jsp">
+	<h1 class="h1_title" align="center">관리자 로그인</h1>
+	<div class="big-sign-up-box">
+		<div class="sign-up-box">
+		    <h3 class="sign-up">관리자 ID</h3>
+		    <input class="sign-up input" name="admin_id" type="text" size="15">
+		</div>
+		
+		<div class="sign-up-box">
+		    <h3 class="sign-up">관리자 Password</h3>
+		    <input class="sign-up input" name="admin_pwd" type="password" size="15">
+		</div>
+	</div>
+	<div class="sign-up-box button-box">
+		<input class="btn sign-up-btn" type="submit" value="로그인">
+		<input class="btn sign-up-btn" type="reset" value="다시쓰기">
+	</div>
+</form>
+</div>
+	<%@ include file="../bottom.jsp"%>
+
 </body>
 </html>
