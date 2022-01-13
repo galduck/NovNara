@@ -18,7 +18,7 @@
 <script src="script.js"></script>
 <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body >
+<body>
 	<%@ include file="../top.jsp" %>
 	<div class="total_product_cover">
 		<%
