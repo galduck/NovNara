@@ -4,7 +4,7 @@
 <html>
 <head>
 <title>Simple Shopping Mall Admin</title>
-<link href="../style.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
 <script  src="script.js"></script>
 </head>
 <body bgcolor="#996600" topmargin="100">
@@ -13,7 +13,7 @@
 	int no = Integer.parseInt(request.getParameter("no"));
 	ProductBean product = pMgr.getProduct(no);
 %>
-<table width="75%" align="center" bgcolor="#FFFF99">
+<table width="75%" align="center" bgcolor="#FFFF99" border="1">
 	<tr>
 		<td align="center" bgcolor="#FFFFCC">
 		<table width="95%" align="center" bgcolor="#FFFF99" border="1">
@@ -23,7 +23,7 @@
 			<tr>
 				<td width="20%">
 					<img src="../img/<%=product.getImage()%>"
-					height="150" width="150">
+					height="150" width="150" >
 				</td>
 				<td width="30%" valign="top">
 				<table border="1" width="100%" height="100%">

@@ -5,6 +5,7 @@ table {
     cellpadding: 0px;
     cellspacing : 0px;
     padding: 0px;
+    border: 0px;
 }
     
 td {
@@ -33,11 +34,11 @@ td {
 }
 
 .product-detail-table-tr{
-		border:1px solid black;
+	border:1px solid black;
 }
 
 .product-detail-table-td{
-			border:1px solid black;
+	border:1px solid black;
 }
 
 .put-in-the-cart{
@@ -47,4 +48,14 @@ td {
 
 .DetailDetail{
 	padding: 100px 0px ; 
+}
+
+img{
+	vertical-align: bottom;
+	float: left;
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+	    cellpadding: 0px;
+    cellspacing : 0px;
 }

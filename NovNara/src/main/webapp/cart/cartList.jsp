@@ -4,14 +4,14 @@
 <%@page import="java.util.Enumeration"%>
 <%@page import="novNara.OrderBean"%>
 <%@page import="java.util.Hashtable"%>
-<%@page contentType="text/html; charset=EUC-KR"%>
+<%@page contentType="text/html; charset=UTF-8"%>
 <jsp:useBean id="cMgr" class="novNara.CartMgr" scope="session" />
 <jsp:useBean id="pMgr" class="novNara.ProductMgr"/>
 <%
-		request.setCharacterEncoding("EUC-KR");
+		request.setCharacterEncoding("UTF-8");
 		String path = request.getContextPath();
 		if(session.getAttribute("idKey")==null){
-			response.sendRedirect(path+"/login/login.jsp");
+			response.sendRedirect(path+"../login/login.jsp");
 			return;
 		}
 		Hashtable<Integer, OrderBean> hCart = cMgr.getCartList();
@@ -30,31 +30,31 @@
 	<td align="center" >
 		<table width="95%" align="center"  border="1">
 			<tr align="center" >
-				<td>Á¦Ç°</font></td>
-				<td>¼ö·®</font></td>
-				<td>°¡°Ý</font></td>
-				<td>¼öÁ¤/»èÁ¦</font></td>
-				<td>Á¶È¸</font></td>
+				<td>ì œí’ˆ</font></td>
+				<td>ìˆ˜ëŸ‰</font></td>
+				<td>ê°€ê²©</font></td>
+				<td>ìˆ˜ì •/ì‚­ì œ</font></td>
+				<td>ì¡°íšŒ</font></td>
 			</tr>
 			<%if(hCart.isEmpty()){ %>
 			<tr>
-				<td colspan="5" align="center">Àå¹Ù±¸´Ï´Â ºñ¾î ÀÖ½À´Ï´Ù.</td>
+				<td colspan="5" align="center">ìž¥ë°”êµ¬ë‹ˆëŠ” ë¹„ì–´ ìžˆìŠµë‹ˆë‹¤.</td>
 			</tr>	
 			<%}else{
-					//ÇØ½¬Å×ÀÌºí¿¡¼­ ÀúÀåµÈ °´Ã¼ÀÇ Å°°ªÀ» °¡Á®¿È.
-					//Enumeration  : ÁÙÁÙÀÌ »çÅÁ °´Ã¼
+					//í•´ì‰¬í…Œì´ë¸”ì—ì„œ ì €ìž¥ëœ ê°ì²´ì˜ í‚¤ê°’ì„ ê°€ì ¸ì˜´.
+					//Enumeration  : ì¤„ì¤„ì´ ì‚¬íƒ• ê°ì²´
 					Enumeration<Integer> hCartKey = hCart.keys();
 					while(hCartKey.hasMoreElements()){
-						//Å°°ªÀ¸·Î ÁÖ¹®°´Ã¼¸¦ ¸®ÅÏ
+						//í‚¤ê°’ìœ¼ë¡œ ì£¼ë¬¸ê°ì²´ë¥¼ ë¦¬í„´
 						OrderBean order = hCart.get(hCartKey.nextElement());
 						int productNo = order.getProductNo();
-						//»óÇ°¹øÈ£·Î »óÇ°Á¤º¸ ¸®ÅÏ
+						//ìƒí’ˆë²ˆí˜¸ë¡œ ìƒí’ˆì •ë³´ ë¦¬í„´
 						ProductBean pbean = pMgr.getProduct(productNo);
-						String pName = pbean.getName();//»óÇ°ÀÌ¸§
-						int price = pbean.getPrice();//»óÇ°°¡°Ý
-						int quantity = order.getQuantity();//ÁÖ¹®¼ö·®
-						int subTotal = price * quantity;//ÁÖ¹®°¡°Ý
-						//ÀüÃ¼ÁÖ¹®°¡°Ý
+						String pName = pbean.getName();//ìƒí’ˆì´ë¦„
+						int price = pbean.getPrice();//ìƒí’ˆê°€ê²©
+						int quantity = order.getQuantity();//ì£¼ë¬¸ìˆ˜ëŸ‰
+						int subTotal = price * quantity;//ì£¼ë¬¸ê°€ê²©
+						//ì „ì²´ì£¼ë¬¸ê°€ê²©
 						totalPrice+=subTotal;
 			%>
 			<tr align="center">
@@ -63,14 +63,14 @@
 				value="<%=productNo%>">
 				<td><%=pName%></td>
 				<td><input name="quantity" style = "text-align:right;" 
-					value="<%=quantity%>" size="3">°³</td>
+					value="<%=quantity%>" size="3">ê°œ</td>
 				<td><%=UtilMgr.monFormat(subTotal)%></td>
 				<td>
-					<input type="button" value="¼öÁ¤" size="3" onclick="javascript:cartUpdate(this.form)"> /
-					<input type="button" value="»èÁ¦" size="3" onclick="javascript:cartDelete(this.form)">
+					<input type="button" value="ìˆ˜ì •" size="3" onclick="javascript:cartUpdate(this.form)"> /
+					<input type="button" value="ì‚­ì œ" size="3" onclick="javascript:cartDelete(this.form)">
 				</td>
 				<td>
-					<a href="javascript:productDetail('<%=productNo%>')">»ó¼¼º¸±â</a>
+					<a href="javascript:productDetail('<%=productNo%>')">ìƒì„¸ë³´ê¸°</a>
 				</td>
 				<input type="hidden" name="flag">
 				</form>
@@ -78,10 +78,10 @@
 			<%}//--while%>
 			<tr>
 				<td colspan="4" align="right">
-					ÃÑ ÁÖ¹®±Ý¾× : <%=UtilMgr.monFormat(totalPrice)%>¿ø	
+					ì´ ì£¼ë¬¸ê¸ˆì•¡ : <%=UtilMgr.monFormat(totalPrice)%>ì›	
 				</td>
 				<td align="center">
-					<a href="orderProc.jsp">ÁÖ¹®ÇÏ±â</a>
+					<a href="../order/orderProc.jsp">ì£¼ë¬¸í•˜ê¸°</a>
 				</td>
 			</tr>
 			<%}//--fi-else %>

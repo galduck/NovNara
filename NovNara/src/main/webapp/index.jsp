@@ -24,7 +24,7 @@
         <button class="btn" ><%=log %></button>
         <button class="btn" ><%=reg%></button>
     </div>
-    <nav class="giant-box">
+    <nav class="giant-box" >
         <div class="oatmeal-box">
             <div class="nav-icons">
                 <i class="fas fa-search fa-lg"></i>
@@ -63,9 +63,9 @@
 	<footer>
 	  <hr>
 	  <p class="copyright">
-	  	&copy; 2022. Miae Je
+	  	
 	  	<span class="span_admin">
-	  		<button class="btn_admin"><a href="./admin/index.jsp">관리자</a></button>
+	  		<button class="btn_admin"><a href="./admin/index.jsp">&copy; 2022. Miae Je</a></button>
 	  	</span>
 	  </p>
 	</footer>

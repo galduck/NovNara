@@ -20,7 +20,7 @@
 <table class="product-detail-table" >
         <tr class="product-detail-table-tr" >
             <td rowspan="5" colspan="2" class="product-detail-img product-detail-table-td" >
-            	<img src="../img/<%=pbean.getImage() %>" height="380" width="430">
+            	<div><img src="../img/<%=pbean.getImage() %>" height="380" width="430"></div>
            	</td>
         </tr>
         <tr>
@@ -35,7 +35,7 @@
 		
 		</tr>
 		<tr class="product-detail-table-tr">
-            <td class="product-detail-table-td"> <input class="put-in-the-cart btn" type="button" value="장바구니 담기"></td>
+            <td class="product-detail-table-td"> <input class="put-in-the-cart btn" type="submit" value="장바구니 담기"></td>
 		</tr>
 	</table>
 		<input type="hidden" name="productNo" value="<%=pbean.getNo()%>">	
