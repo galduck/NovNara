@@ -13,14 +13,17 @@
 @import "screens/productDetail.css";
 
 /* set as a default */
-html,
+html{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 body{
 	width: 100%;
 	height: 100%;
 	color: black;
 	font-family: "Open Sans", sans-serif;
-	padding: 10px 10px 70px 10px;
-}
+	}
 
 .copyright{
 	display: flex;

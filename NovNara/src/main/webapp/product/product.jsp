@@ -5,8 +5,12 @@
 <%@page contentType="text/html; charset=UTF-8"%>
 <jsp:useBean id="pMgr" class="novNara.ProductMgr"/>
 <%
-		request.setCharacterEncoding("UTF-8");
-		Vector<ProductBean> pvlist = pMgr.getProductList();
+	int sort = 0;
+	if(request.getParameter("sort")!=null){
+		sort = UtilMgr.parseInt(request, "sort");
+	}
+	request.setCharacterEncoding("UTF-8");
+	Vector<ProductBean> pvlist = pMgr.getProductList(sort);
 %>
 <html>
 <head>
@@ -14,7 +18,7 @@
 <script src="script.js"></script>
 <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body  topmargin="100">
+<body >
 	<%@ include file="../top.jsp" %>
 	<div class="total_product_cover">
 		<%

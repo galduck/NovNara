@@ -37,33 +37,33 @@ CREATE TABLE tblAdmin (
 
 
 insert tblProduct(sort, NAME, price,detail,date,stock,image)
-VALUES (0,'데이지찬장',150000,'데이지 찬장  상세설명',
+VALUES (1,'데이지찬장',150000,'데이지 찬장  상세설명',
 now(), 100, 'DaisyCab.png');
 
 insert tblProduct(sort, name,price,detail,date,stock,image)
-VALUES (0,'리본 벽걸이 찬장',150000,'리본 벽걸이 찬장  상세설명',
+VALUES (1,'리본 벽걸이 찬장',150000,'리본 벽걸이 찬장  상세설명',
 now(), 100, 'RibonWall.png');
 
 insert tblProduct(sort, name,price,detail,date,stock,image)
-VALUES (0, '나비썬캐쳐',35000,'나비 썬캐쳐  상세설명',
+VALUES (1, '나비썬캐쳐',35000,'나비 썬캐쳐  상세설명',
 now(), 100, 'Butterfly.png');
 
 insert tblProduct(sort, name,price,detail,date,stock,image)
-VALUES (0, '고양이썬캐쳐',37000,'고양이 썬캐쳐 상세설명',
+VALUES (1, '고양이썬캐쳐',37000,'고양이 썬캐쳐 상세설명',
 now(), 100, 'CheezeCat.png');
 
 insert tblProduct(sort, name,price,detail,date,stock,image)
-VALUES (1, '다프네스탠드',200000,'다프테 스탠드  상세설명',
+VALUES (2, '다프네스탠드',200000,'다프테 스탠드  상세설명',
 now(), 100, 'DafneStd.png');
 
 insert tblProduct(sort, name,price,detail,date,stock,image)
-VALUES (1, '수선화스탠드',200000,'수선화  스탠드  상세설명',
+VALUES (2, '수선화스탠드',200000,'수선화  스탠드  상세설명',
 now(), 100, 'PaperwhiteStd.png');
 
 insert tblProduct(sort, name,price,detail,date,stock,image)
-VALUES (1, '물방울조명',200000,'물방울 조명   상세설명',
+VALUES (2, '물방울조명',200000,'물방울 조명   상세설명',
 now(), 100, 'Waterdrop.png');
 
 insert tblProduct(sort, name,price,detail,date,stock,image)
-VALUES (1, '체리조명',180000,'체리조명  상세설명',
+VALUES (2, '체리조명',180000,'체리조명  상세설명',
 now(), 100, 'Cherry.png');

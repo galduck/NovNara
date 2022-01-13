@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>NovNara</title>
 </head>
-<body>
+<body bottommargin="100">
 <%
 	String id = (String)session.getAttribute("idKey");
 	
@@ -48,9 +48,9 @@
             <div class="menu">
                 <span class="home" ><a href="./index.jsp">홈</a></span>
                 <span class="best"><a href="./product/best.jsp" >베스트</a></span>
-                <span class="product"><a href="./product/product.jsp" >전체상품</a></span>
-                <span class="objet"><a href="./product/objet.jsp" >소품</a></span>
-                <span class="light"><a href="./product/light.jsp" >조명</a></span>
+                <span class="product"><a href="./product/product.jsp?sort=0" >전체상품</a></span>
+                <span class="objet"><a href="./product/product.jsp?sort=1" >소품</a></span>
+                <span class="light"><a href="./product/product.jsp?sort=2" >조명</a></span>
             </div>
             <div class="search-box">
                 <div class="search">

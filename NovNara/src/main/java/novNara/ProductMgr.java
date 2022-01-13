@@ -25,7 +25,7 @@ public class ProductMgr {
 	}
 	
 	//Product List
-	public Vector<ProductBean> getProductList(){
+	public Vector<ProductBean> getProductList(int sort){
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -33,9 +33,17 @@ public class ProductMgr {
 		Vector<ProductBean> vlist = new Vector<ProductBean>();
 		try {
 			con = pool.getConnection();
-			sql = "select no, sort, name, price, date, stock, image from tblProduct "
+			if(sort==0) {
+				sql = "select no, sort, name, price, date, stock, image from tblProduct "
 					+ "order by no desc";
-			pstmt = con.prepareStatement(sql);
+				pstmt = con.prepareStatement(sql);
+			}else {
+				sql = "select no, sort, name, price, date, stock, image from tblProduct where sort = ? "
+						+ "order by no desc";
+				pstmt = con.prepareStatement(sql);
+				pstmt.setInt(1, sort);
+				
+			}
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				ProductBean bean = new ProductBean();
