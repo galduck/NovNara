@@ -4,7 +4,7 @@
 <html>
 <head>
 <title>Simple Shopping Mall Admin</title>
-<link href="../style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/style.css" />
 <script src="script.js"></script>
 </head>
 <body bgcolor="#996600" topmargin="100">
@@ -14,6 +14,7 @@
 		<td align="center" bgcolor="#FFFFCC">
 		<table width="95%" align="center" bgcolor="#FFFF99" border="1">
 			<tr  align="center" bgcolor="#996600">
+				<td><font color="#FFFFFF">구분</font></td>
 				<td><font color="#FFFFFF">이름</font></td>
 				<td><font color="#FFFFFF">가격</font></td>
 				<td><font color="#FFFFFF">날짜</font></td>
@@ -33,6 +34,7 @@
 						ProductBean product = vResult.get(i);
 			%>
 			<tr  align="center">
+				<td><%=UtilMgr.intFormat(product.getSort())%></td>
 				<td><%=product.getName()%></td>
 				<td><%=UtilMgr.intFormat(product.getPrice())%></td>
 				<td><%=product.getDate()%></td>

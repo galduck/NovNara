@@ -33,18 +33,19 @@ public class ProductMgr {
 		Vector<ProductBean> vlist = new Vector<ProductBean>();
 		try {
 			con = pool.getConnection();
-			sql = "select no, name, price, date, stock, image from tblProduct "
+			sql = "select no, sort, name, price, date, stock, image from tblProduct "
 					+ "order by no desc";
 			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				ProductBean bean = new ProductBean();
 				bean.setNo(rs.getInt(1));
-				bean.setName(rs.getString(2));
-				bean.setPrice(rs.getInt(3));
-				bean.setDate(rs.getString(4));
-				bean.setStock(rs.getInt(5));
-				bean.setImage(rs.getString(6));
+				bean.setSort(rs.getInt(2));
+				bean.setName(rs.getString(3));
+				bean.setPrice(rs.getInt(4));
+				bean.setDate(rs.getString(5));
+				bean.setStock(rs.getInt(6));
+				bean.setImage(rs.getString(7));
 				vlist.addElement(bean);
 			}
 		} catch (Exception e) {
@@ -66,19 +67,20 @@ public class ProductMgr {
 		ProductBean bean = new ProductBean();
 		try {
 			con = pool.getConnection();
-			sql = "select no, name, price, detail, date, stock, image "
+			sql = "select no, sort, name, price, detail, date, stock, image "
 					+ "from tblProduct where no=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, no);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				bean.setNo(rs.getInt(1));
-				bean.setName(rs.getString(2));
-				bean.setPrice(rs.getInt(3));
-				bean.setDetail(rs.getString(4));
-				bean.setDate(rs.getString(5));
-				bean.setStock(rs.getInt(6));
-				bean.setImage(rs.getString(7));
+				bean.setSort(rs.getInt(2));
+				bean.setName(rs.getString(3));
+				bean.setPrice(rs.getInt(4));
+				bean.setDetail(rs.getString(5));
+				bean.setDate(rs.getString(6));
+				bean.setStock(rs.getInt(7));
+				bean.setImage(rs.getString(8));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -123,18 +125,19 @@ public class ProductMgr {
 			MultipartRequest multi = new MultipartRequest(req, SAVEDIRECTORY,
 					MAXPOSTSIZE, ENCODING, new DefaultFileRenamePolicy());
 			con = pool.getConnection();
-			sql = "insert tblProduct(name,price,detail,date,stock,image)"
-					+ "values(?,?,?,?,?,?)";
+			sql = "insert tblProduct(sort,name,price,detail,date,stock,image)"
+					+ "values(?,?,?,?,?,?,?)";
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, multi.getParameter("name"));
-			pstmt.setInt(2, Integer.parseInt(multi.getParameter("price")));
-			pstmt.setString(3, multi.getParameter("detail"));
-			pstmt.setString(4, UtilMgr.getDay());
-			pstmt.setInt(5, Integer.parseInt(multi.getParameter("stock")));
+			pstmt.setInt(1,Integer.parseInt(multi.getParameter("sort")) );
+			pstmt.setString(2, multi.getParameter("name"));
+			pstmt.setInt(3, Integer.parseInt(multi.getParameter("price")));
+			pstmt.setString(4, multi.getParameter("detail"));
+			pstmt.setString(5, UtilMgr.getDay());
+			pstmt.setInt(6, Integer.parseInt(multi.getParameter("stock")));
 			if(multi.getFilesystemName("image")!=null)
-				pstmt.setString(6, multi.getFilesystemName("image"));
+				pstmt.setString(7, multi.getFilesystemName("image"));
 			else
-				pstmt.setString(6, "ready.gif");
+				pstmt.setString(7, "ready.gif");
 			if(pstmt.executeUpdate()==1) flag = true;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -155,24 +158,26 @@ public class ProductMgr {
 					MAXPOSTSIZE, ENCODING, new DefaultFileRenamePolicy());
 			con = pool.getConnection();
 			if(multi.getFilesystemName("image")!=null) {//이미지도 수정
-				sql = "update tblProduct set name=?, price=?,"
+				sql = "update tblProduct set sort=?, name=?, price=?,"
 						+ "detail=?, stock=?, image=? where no=?";
 				pstmt = con.prepareStatement(sql);
-				pstmt.setString(1, multi.getParameter("name"));
-				pstmt.setInt(2, Integer.parseInt(multi.getParameter("price")));
-				pstmt.setString(3, multi.getParameter("detail"));
-				pstmt.setInt(4, Integer.parseInt(multi.getParameter("stock")));
-				pstmt.setString(5, multi.getFilesystemName("image"));
-				pstmt.setInt(6, Integer.parseInt(multi.getParameter("no")));
+				pstmt.setInt(1, Integer.parseInt(multi.getParameter("sort")));
+				pstmt.setString(2, multi.getParameter("name"));
+				pstmt.setInt(3, Integer.parseInt(multi.getParameter("price")));
+				pstmt.setString(4, multi.getParameter("detail"));
+				pstmt.setInt(5, Integer.parseInt(multi.getParameter("stock")));
+				pstmt.setString(6, multi.getFilesystemName("image"));
+				pstmt.setInt(7, Integer.parseInt(multi.getParameter("no")));
 			}else {//이미지 수정 아님.
-				sql = "update tblProduct set name=?, price=?,"
+				sql = "update tblProduct set sort=?, name=?, price=?,"
 						+ "detail=?, stock=? where no=?";
 				pstmt = con.prepareStatement(sql);
-				pstmt.setString(1, multi.getParameter("name"));
-				pstmt.setInt(2, Integer.parseInt(multi.getParameter("price")));
-				pstmt.setString(3, multi.getParameter("detail"));
-				pstmt.setInt(4, Integer.parseInt(multi.getParameter("stock")));
-				pstmt.setInt(5, Integer.parseInt(multi.getParameter("no")));
+				pstmt.setInt(1, Integer.parseInt(multi.getParameter("sort")));
+				pstmt.setString(2, multi.getParameter("name"));
+				pstmt.setInt(3, Integer.parseInt(multi.getParameter("price")));
+				pstmt.setString(4, multi.getParameter("detail"));
+				pstmt.setInt(5, Integer.parseInt(multi.getParameter("stock")));
+				pstmt.setInt(6, Integer.parseInt(multi.getParameter("no")));
 			}
 			if(pstmt.executeUpdate()==1) flag = true;
 		} catch (Exception e) {

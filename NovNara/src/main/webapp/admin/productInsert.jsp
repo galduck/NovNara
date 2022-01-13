@@ -18,6 +18,10 @@
 		</td>
 		</tr>
 		<tr> 
+			<td align="center">구분 (0:소품, 1:등)</td>
+			<td align="left"><input name="sort" size="5"></td>
+		</tr>
+		<tr> 
 			<td align="center">상품이름</td>
 			<td align="left"><input name="name" size="20"></td>
 		</tr>

@@ -60,15 +60,17 @@
         </div>
     </nav>
     
-		<!-- bottom 부분 -->
-		<jsp:include page="bottom.jsp" />
+	<footer>
+	  <hr>
+	  <p class="copyright">
+	  	&copy; 2022. Miae Je
+	  	<span class="span_admin">
+	  		<button class="btn_admin"><a href="./admin/index.jsp">관리자</a></button>
+	  	</span>
+	  </p>
+	</footer>
     <script
     src="https://kit.fontawesome.com/6478f529f2.js"
-    crossorigin="anonymous"
-    
-    
-  ></script>
-
-		
+    crossorigin="anonymous"></script>
 </body>
 </html>

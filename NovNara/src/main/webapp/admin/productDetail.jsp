@@ -22,7 +22,7 @@
 			</tr>
 			<tr>
 				<td width="20%">
-					<img src="../data/<%=product.getImage()%>"
+					<img src="../img/<%=product.getImage()%>"
 					height="150" width="150">
 				</td>
 				<td width="30%" valign="top">
