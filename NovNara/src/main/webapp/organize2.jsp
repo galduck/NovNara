@@ -1,3 +1,4 @@
+<%@ page pageEncoding="UTF-8"%>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
@@ -7,17 +8,13 @@
 </head>
 
 <body  topmargin="100" bottommargin="100">
-
-	<%@ include file="../top.jsp"%>
-	<%@ include file="top.jsp" %>
-	<table width="75%" align="center" bgcolor="#FFFF99">
-	<tr bordercolor="#FFFF99"> 
-	<td height="190" align="center">관리자 화면입니다.</td>
-	</tr>
-	</table>
-	<%@ include file="bottom.jsp" %>
-
-	<%@ include file="../bottom.jsp"%>
+	<%@ include file="../admin/top.jsp"%>
+	
+	
+	
+	<%@ include file="../admin/bottom.jsp"%>
+    <script src="https://kit.fontawesome.com/6478f529f2.js"
+    crossorigin="anonymous"></script>
 </body>
 </html>
 

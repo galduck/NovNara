@@ -17,21 +17,12 @@
     </div>
     <nav class="giant-box">
         <div class="oatmeal-box">
-            <div class="nav-icons">
-                <i class="fas fa-search fa-lg"></i>
-                <i class="fas fa-shopping-basket fa-lg"><a href="../cart/cartList.jsp"></a></i>
 
-                <label class="list" for="list"> <i class="fas fa-bars fa-lg" ></i></label>
-	                <input id="list" type="checkbox">
-	                <nav id="main_nav">
-	                	<ul>
-	                		<li><a href="../product/product.jsp">전체상품</a></li>
-    						<li><a href="../cart/cartList.jsp">장바구니</a></li>
-    						<li><a href="../order/orderList.jsp">구매목록</a></li>
-	                	</ul>
-	                </nav>
+           	<div class="nav-icons">
+              	<i class="fas fa-shopping-basket fa-lg"><a href="../cart/cartList.jsp"></a></i>
+           		<i class="fas fa-bars fa-lg" ><a href="../order/orderList.jsp"></a></i>
+       		</div>  
                 
-            </div>  
             <div class="logo-box">
                 <img src="../img/logo2.png" class="logo2" />
             </div>

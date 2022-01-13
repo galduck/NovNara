@@ -3,7 +3,7 @@
 <jsp:useBean id="pMgr" class="novNara.ProductMgr" />
 <html>
 <head>
-<title>Simple Shopping Mall Admin</title>
+<title>NovNara</title>
 <link rel="stylesheet" href="../css/style.css" />
 <script src="script.js"></script>
 </head>
@@ -22,9 +22,15 @@
 				<td>&nbsp;</td>
 			</tr>
 			<%
-				Vector<ProductBean> vResult = pMgr.getProductList();
+				int sort = 0; 
+				if(request.getParameter("sort")!=null){
+					sort = UtilMgr.parseInt(request, "sort");
+				}
+
+				Vector<ProductBean> vResult = pMgr.getProductList(sort);
 				if (vResult.size() == 0) {
 			%>
+		
 			<tr>
 				<td align="center" colspan="5">등록된 상품이 없습니다.</td>
 			</tr>
