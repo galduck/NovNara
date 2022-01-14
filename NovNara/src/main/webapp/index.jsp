@@ -49,11 +49,16 @@
              <span class="objet"><a href="./product/product.jsp?sort=1" >소품</a></span>
              <span class="light"><a href="./product/product.jsp?sort=2" >조명</a></span>
          </div>
-         <div class="search-box">
-             <div class="search">
-                 <i class="fas fa-search fa-2x"></i>
-        	 </div>
-         </div>
+        <div class="search-box">
+            <div class="search">
+        		<input class="search_input" type="text" placeholder="검색어를 입력해주세요" > 
+                <div>
+                	<a href="#">
+	                	<i class="fas fa-search fa-2x"></i>
+                	</a>
+                </div>
+            </div>
+        </div>
      </div>
  </nav>
    

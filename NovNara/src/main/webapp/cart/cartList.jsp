@@ -11,7 +11,7 @@
 		request.setCharacterEncoding("UTF-8");
 		String path = request.getContextPath();
 		if(session.getAttribute("idKey")==null){
-			response.sendRedirect(path+"../login/login.jsp");
+			response.sendRedirect(path+"/login/login.jsp");
 			return;
 		}
 		Hashtable<Integer, OrderBean> hCart = cMgr.getCartList();

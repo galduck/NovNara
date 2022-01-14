@@ -217,48 +217,39 @@ public class ProductMgr {
 		return flag;
 	}
 	
-	//Min stock : 현재 stock의 Min
-	public int getMinStock() {
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		String sql = null;
-		int minStock = 0;
-		try {
-			con = pool.getConnection();
-			sql = "select min(stock) from tblProduct";
-			pstmt = con.prepareStatement(sql);
-			rs = pstmt.executeQuery();
-			if(rs.next()) minStock = rs.getInt(1);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			pool.freeConnection(con, pstmt, rs);
-		}
-		return minStock;
-	}
+
 	
-	//Min Stock Count : 재고 중에 가장 낮은값
-	public int getMinCount(int stock) {
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		String sql = null;
-		int minStockCnt = 0;
-		try {
-			con = pool.getConnection();
-			sql = "select min(count) from tblProduct where stock=?";
-			pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1, stock==0?getMinStock():stock);
-			rs = pstmt.executeQuery();
-			if(rs.next()) minStockCnt = rs.getInt(1);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			pool.freeConnection(con, pstmt, rs);
+	//Stock List
+		public Vector<ProductBean> getStockList(){
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			String sql = null;
+			Vector<ProductBean> vlist = new Vector<ProductBean>();
+			try {
+				con = pool.getConnection();
+				sql = "select no, sort, name, price, date, stock, image from tblProduct "
+				+ "order by stock";
+				pstmt = con.prepareStatement(sql);
+				rs = pstmt.executeQuery();
+				while(rs.next()) {
+					ProductBean bean = new ProductBean();
+					bean.setNo(rs.getInt(1));
+					bean.setSort(rs.getInt(2));
+					bean.setName(rs.getString(3));
+					bean.setPrice(rs.getInt(4));
+					bean.setDate(rs.getString(5));
+					bean.setStock(rs.getInt(6));
+					bean.setImage(rs.getString(7));
+					vlist.addElement(bean);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				pool.freeConnection(con, pstmt, rs);
+			}
+			return vlist;
 		}
-		return minStockCnt;
-	}
 	
 }
 

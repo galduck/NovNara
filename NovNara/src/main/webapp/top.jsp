@@ -12,12 +12,15 @@
 %>
 
 <div class="member-buttons">
-       <button class="btn" ><%=log %></button>
+    <button class="btn" ><%=log %></button>
     <button class="btn" ><%=reg%></button>
 </div>
 <nav class="giant-box">
     <div class="oatmeal-box">
        	<div class="nav-icons">
+       		<div>
+       			<i class="fas fa-question-circle fa-lg"></i>
+       		</div>
        		<div>
        			<a href="../cart/cartList.jsp">
        				<i class="fas fa-shopping-basket fa-lg"></i>
@@ -42,7 +45,12 @@
         </div>
         <div class="search-box">
             <div class="search">
-                <i class="fas fa-search fa-2x"></i>
+        		<input class="search_input" type="text" placeholder="검색어를 입력해주세요" > 
+                <div>
+                	<a href="#">
+	                	<i class="fas fa-search fa-2x"></i>
+                	</a>
+                </div>
             </div>
         </div>
     </div>
