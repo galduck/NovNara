@@ -11,7 +11,7 @@
 <body topmargin="100">
 <%@ include file="top.jsp" %>
 <div class="h1_title table_title">주문 관리</div>
-<div class="talbe_div">
+<div class="table_div">
 <table width="75%" align="center">
 <tr> 
 <td align="center">

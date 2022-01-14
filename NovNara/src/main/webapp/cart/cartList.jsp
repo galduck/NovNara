@@ -21,7 +21,7 @@
 <head>
 <title>NovNara</title>
 <link rel="stylesheet" href="../css/style.css" />
-<script src="script.js"></script>
+<script src="../member/script.js"></script>
 </head>
 <body  topmargin="100">
 <%@ include file="../top.jsp" %>

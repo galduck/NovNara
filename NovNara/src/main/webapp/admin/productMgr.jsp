@@ -10,7 +10,7 @@
 <body topmargin="100">
 <%@ include file="top.jsp"%>
 <div class="h1_title table_title">상품 관리</div>
-<div class="admin_div">
+<div class="table_div">
 <table width="75%" align="center" >
 	<tr>
 		<td align="center">
@@ -54,18 +54,15 @@
 					}//for
 				}//if
 			%>
-			<tr>
-				<td colspan="5" align="center">
-					<a href="productInsert.jsp">상품등록</a>
-				</td>
-			</tr>
 		</table>
 		</td>
 	</tr>
 </table>
-
-<input type="button" value="상품등록" >
 </div>
+<form class="productMgr-buttons" name="input" action="../admin/productInsert.jsp" method="get">
+	<input class="productMgr_btn" type="submit" value="상품등록" >
+</form>
+
 <%@ include file="../bottom.jsp"%>
 <form name="detail" method="post" action="productDetail.jsp">
 	<input type="hidden" name="no">

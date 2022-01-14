@@ -18,11 +18,11 @@
 <%@ include file="top.jsp"%>
 <form method="post" name="order" action="orderProc.jsp">
 <div class="h1_title table_title">주문상세내역</div>
-<div class="admin_div"> 
-<table width="75%" align="center">
+<div class="table_div"> 
+<table width="75%" align="center" >
 	<tr>
 		<td align="center">
-		<table width="75%" align="center">
+		<table width="30%" align="center">
 			
 			<tr align="center">
 				<td>고객아이디</td>

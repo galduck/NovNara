@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-<title>Simple Shopping Mall Admin</title>
-<link href="../style.css" rel="stylesheet" type="text/css">
+<title>NovNara</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
 <script src="script.js"></script>
 </head>
 <body bgcolor="#996600" topmargin="100">

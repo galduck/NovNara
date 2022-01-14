@@ -11,7 +11,7 @@
 	<%@ include file="top.jsp" %> 
 	<%Vector<MemberBean> vlist = mMgr.getMemberList();%>
 <div class="h1_title table_title">회원 관리</div>
-<div class="admin_div">
+<div class="table_div">
 <table width="75%" align="center">
 	<tr> 
 	<td align="center">

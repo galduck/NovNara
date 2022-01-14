@@ -1,12 +1,4 @@
-@charset "EUC-KR";
-
-
-.table_div{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 100px;
-}
+@charset "UTF-8";
 
 .table_title{
 	display: flex;
@@ -16,3 +8,22 @@
 	margin-bottom: 50px;
 }
 
+.table_div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+
+.productMgr-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.productMgr_btn{
+	border: none;
+	border-radius : 5px;
+    padding: 10px 30px;
+    margin: 5px;
+}
