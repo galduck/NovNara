@@ -1,6 +1,6 @@
 <%@page pageEncoding="UTF-8"%>
   
-<footer margintop="1000">
+<footer class="footer">
   <hr>
   <p class="copyright">
   	<span class="span_admin">

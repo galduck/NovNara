@@ -5,11 +5,11 @@
 
 /* components */
 @import "components/top.css";
+@import "components/bottom.css";
 
 /* Screens */
 @import "screens/member.css";
 @import "screens/product.css";
-@import "screens/bottom.css";
 @import "screens/admin.css";
 @import "screens/productDetail.css";
 
@@ -22,5 +22,6 @@ body{
 	color: black;
 	font-family: "Open Sans", sans-serif;
 	}
+
 
 

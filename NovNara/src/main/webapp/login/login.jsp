@@ -7,7 +7,7 @@
 <title>NovNara</title>
 </head>
 <body >
-<jsp:include page="../top.jsp" />
+	<%@ include file="../top.jsp" %>
 <div class="huge-sign-up-box">
 <form class=sign-up-form method="post" action="loginProc.jsp">
 	<h1 class="h1_title" align="center">로그인</h1>
@@ -28,5 +28,7 @@
 	</div>
 </form>
 </div>
+	<%@ include file="../bottom.jsp" %>
+
 </body>
 </html>

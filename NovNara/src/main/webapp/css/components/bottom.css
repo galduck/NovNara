@@ -1,5 +1,9 @@
 @charset "EUC-KR";
 
+.footer{
+	margin-top: 100px;
+	margin-bottom: 30px;
+}
 .copyright{
 	display: flex;
 	justify-content: center;

@@ -1,10 +1,11 @@
 @charset "EUC-KR";
 
 
-.admin_div{
+.table_div{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 100px;
 }
 
 .table_title{
@@ -12,5 +13,6 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 50px;
 }
 

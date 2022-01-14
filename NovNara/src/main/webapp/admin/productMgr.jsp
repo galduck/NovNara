@@ -63,6 +63,8 @@
 		</td>
 	</tr>
 </table>
+
+<input type="button" value="상품등록" >
 </div>
 <%@ include file="../bottom.jsp"%>
 <form name="detail" method="post" action="productDetail.jsp">

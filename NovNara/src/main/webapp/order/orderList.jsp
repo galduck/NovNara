@@ -19,6 +19,7 @@
 </head>
 <body topmargin="100">
 <%@ include file="../top.jsp" %>
+<div class="table_div">
 	<table width="75%" align="center" >
 	<tr> 
 	<td align="center" >
@@ -75,9 +76,10 @@
 	</td>
 	</tr>
 	</table>
-	<%@ include file="../bottom.jsp" %>
 	<form name="detail" method="post" action="../product/productDetail.jsp" >
-	<input type="hidden" name="no">
+		<input type="hidden" name="no">
 	</form>
+</div>
+	<%@ include file="../bottom.jsp" %>
 </body>
 </html>
