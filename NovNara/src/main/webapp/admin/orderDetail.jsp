@@ -10,22 +10,20 @@
 %>
 <html>
 <head>
-<title>Simple Shopping Mall Admin</title>
-<link href="../style.css" rel="stylesheet" type="text/css">
+<title>NovNara</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
 <script src="script.js"></script>
 </head>
-<body bgcolor="#996600" topmargin="100">
+<body>
 <%@ include file="top.jsp"%>
 <form method="post" name="order" action="orderProc.jsp">
-<table width="75%" align="center" bgcolor="#FFFF99">
+<div class="h1_title table_title">주문상세내역</div>
+<div class="admin_div"> 
+<table width="75%" align="center">
 	<tr>
-		<td align="center" bgcolor="#FFFFCC">
-		<table width="95%" align="center" bgcolor="#FFFF99" border="1">
-			<tr bgcolor="#996600">
-				<td colspan="2" align="center">
-					<font color="#FFFFFF">주문상세내역</font>
-				</td>
-			</tr>
+		<td align="center">
+		<table width="75%" align="center">
+			
 			<tr align="center">
 				<td>고객아이디</td>
 				<td><%=order.getId()%></td>
@@ -78,9 +76,9 @@
 			</tr>
 			<tr align="center">
 				<td colspan="2">
-					<input type="button" value="수정"
-					size="3" onclick="javascript:orderUpdate(this.form)"> / 
-					<input type="button" value="삭제" size="3"
+					<input class="btn" type="button" value="수정"
+					size="3" onclick="javascript:orderUpdate(this.form)">  
+					<input class="btn" type="button" value="삭제" size="3"
 					onclick="javascript:orderDelete(this.form)">
 				</td>
 			</tr>
@@ -90,7 +88,8 @@
 		</td>
 	</tr>
 </table>
+</div>
 </form>
-<%@ include file="bottom.jsp"%>
+<%@ include file="../bottom.jsp"%>
 </body>
 </html>

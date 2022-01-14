@@ -52,7 +52,7 @@
 	</tr>
 	</table>
 	</form>
-	<%@ include file="bottom.jsp" %>
+	<%@ include file="../bottom.jsp" %>
 </body>
 </html>
 

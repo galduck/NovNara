@@ -1,3 +1,8 @@
+.one_more_product_cover{
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
 
 .total_product_cover{
 	justify-content: space-between;
@@ -7,6 +12,7 @@
 }
 	
 .total_product{
+	
 	display: inline-block;
 	justify-content: center;
 	align-items: center;

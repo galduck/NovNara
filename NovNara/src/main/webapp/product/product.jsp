@@ -20,6 +20,7 @@
 </head>
 <body>
 	<%@ include file="../top.jsp" %>
+<div class="one_more_product_cover">
 	<div class="total_product_cover">
 		<%
 					for(int i=0;i<pvlist.size();i++){
@@ -41,7 +42,7 @@
 		<%}%>
 	<%@ include file="../bottom.jsp" %>
 	</div>
-
+</div>
 </body>
 </html>
 

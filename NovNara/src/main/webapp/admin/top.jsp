@@ -8,7 +8,7 @@
 %>
 
 	<div class="member-buttons">
-		<input class="btn" value="로그아웃" >
+		<input class="btn" type="button" value="로그아웃" >
     </div>
     <nav class="giant-box">
         <div class="oatmeal-box">

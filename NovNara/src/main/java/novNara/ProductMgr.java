@@ -216,6 +216,50 @@ public class ProductMgr {
 		}
 		return flag;
 	}
+	
+	//Min stock : 현재 stock의 Min
+	public int getMinStock() {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = null;
+		int minStock = 0;
+		try {
+			con = pool.getConnection();
+			sql = "select min(stock) from tblProduct";
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			if(rs.next()) minStock = rs.getInt(1);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			pool.freeConnection(con, pstmt, rs);
+		}
+		return minStock;
+	}
+	
+	//Min Stock Count : 재고 중에 가장 낮은값
+	public int getMinCount(int stock) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = null;
+		int minStockCnt = 0;
+		try {
+			con = pool.getConnection();
+			sql = "select min(count) from tblProduct where stock=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, stock==0?getMinStock():stock);
+			rs = pstmt.executeQuery();
+			if(rs.next()) minStockCnt = rs.getInt(1);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			pool.freeConnection(con, pstmt, rs);
+		}
+		return minStockCnt;
+	}
+	
 }
 
 

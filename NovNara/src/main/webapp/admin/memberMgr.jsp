@@ -10,12 +10,13 @@
 <body  topmargin="100">
 	<%@ include file="top.jsp" %> 
 	<%Vector<MemberBean> vlist = mMgr.getMemberList();%>
-	<table width="75%" align="center" >
+<div class="admin_div">
+<table width="75%" align="center">
 	<tr> 
-	<td align="center" >
+	<td align="center">
 
-		<table width="95%" align="center" bordercolor="black" border="1">
-		<tr align="center" > 
+		<table width="95%" align="center">
+		<tr align="center"> 
 			<td>회원이름</td>
 			<td>회원아이디</td>
 			<td>패스워드</td>
@@ -44,7 +45,8 @@
 		</table>
 	</td>
 	</tr>
-	</table>
+</table>
+</div>
 	<%@ include file="../bottom.jsp" %>
 	<form name="update" method="post" action="memberUpdate.jsp">
 	<input type=hidden name="id">

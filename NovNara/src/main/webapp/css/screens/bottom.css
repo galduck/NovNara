@@ -1,0 +1,16 @@
+@charset "EUC-KR";
+
+.copyright{
+	display: flex;
+	justify-content: center;
+}
+.span_admin{
+	display: inline-block;
+	justify-content:flex-end;
+	align-items: center;
+}
+
+.btn_admin{
+	border: none;
+	background-color: white;
+}

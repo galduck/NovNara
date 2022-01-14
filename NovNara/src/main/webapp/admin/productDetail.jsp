@@ -54,7 +54,7 @@
 		</td>
 	</tr>
 </table>
-<%@ include file="bottom.jsp"%>
+<%@ include file="../bottom.jsp"%>
 <form name="update" method="post" action="productUpdate.jsp"><input
 	type=hidden name=no></form>
 <form name="del" method="post" action="productProc.jsp?flag=delete">
