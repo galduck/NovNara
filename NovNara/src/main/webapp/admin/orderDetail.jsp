@@ -25,44 +25,44 @@
 		<table width="30%" align="center">
 			
 			<tr align="center">
-				<td>고객아이디</td>
-				<td><%=order.getId()%></td>
+				<td class="table_td">고객아이디</td>
+				<td class="table_td"><%=order.getId()%></td>
 			</tr>
 			<tr align="center">
-				<td>주문번호</td>
-				<td><%=order.getNo()%></td>
+				<td class="table_td">주문번호</td>
+				<td class="table_td"><%=order.getNo()%></td>
 			</tr>
 			<tr align="center">
-				<td>제품번호</td>
-				<td><%=product.getNo()%></td>
+				<td class="table_td">제품번호</td>
+				<td class="table_td"><%=product.getNo()%></td>
 			</tr>
 			<tr align="center">
-				<td>제품이름</td>
-				<td><%=product.getName()%></td>
+				<td class="table_td">제품이름</td>
+				<td class="table_td"><%=product.getName()%></td>
 			</tr>
 			<tr align="center">
-				<td>제품가격</td>
-				<td><%=UtilMgr.intFormat(product.getPrice())%>원</td>
+				<td class="table_td">제품가격</td>
+				<td class="table_td"><%=UtilMgr.intFormat(product.getPrice())%>원</td>
 			</tr>
 			<tr align="center">
-				<td>주문수량</td>
-				<td><%=order.getQuantity() + ""%>개</td>
+				<td class="table_td">주문수량</td>
+				<td class="table_td"><%=order.getQuantity() + ""%>개</td>
 			</tr>
 			<tr align="center">
-				<td>재고수량</td>
-				<td><%=product.getStock()%>개</td>
+				<td class="table_td">재고수량</td>
+				<td class="table_td"><%=product.getStock()%>개</td>
 			</tr>
 			<tr align="center">
-				<td>주문날짜</td>
-				<td><%=order.getDate()%></td>
+				<td class="table_td">주문날짜</td>
+				<td class="table_td"><%=order.getDate()%></td>
 			</tr>
 			<tr align="center">
-				<td>금액</td>
-				<td><%=UtilMgr.intFormat(order.getQuantity() * product.getPrice())%>원</td>
+				<td class="table_td">금액</td>
+				<td class="table_td"><%=UtilMgr.intFormat(order.getQuantity() * product.getPrice())%>원</td>
 			</tr>
 			<tr align="center">
-				<td>주문상태</td>
-				<td>
+				<td class="table_td">주문상태</td>
+				<td class="table_td">
 					<select name="state">
 						<option value="1">접수중</option>
 						<option value="2">접수</option>
@@ -75,7 +75,7 @@
 				</td>
 			</tr>
 			<tr align="center">
-				<td colspan="2">
+				<td class="table_td" colspan="2">
 					<input class="btn" type="button" value="수정"
 					size="3" onclick="javascript:orderUpdate(this.form)">  
 					<input class="btn" type="button" value="삭제" size="3"
