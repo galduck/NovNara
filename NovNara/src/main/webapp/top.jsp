@@ -15,45 +15,48 @@
     <button class="btn" ><%=log %></button>
     <button class="btn" ><%=reg%></button>
 </div>
-<nav class="giant-box">
-    <div class="oatmeal-box">
-       	<div class="nav-icons">
-       		<div>
-       			<i class="fas fa-question-circle fa-lg"></i>
-       		</div>
-       		<div>
-       			<a href="../cart/cartList.jsp">
-       				<i class="fas fa-shopping-basket fa-lg"></i>
-       			</a>
-   			</div>
-          	<div>
-	          	<a href="../order/orderList.jsp">
-		          	<i class="fas fa-bars fa-lg" ></i>
-	          	</a>
-          	</div>
-   		</div>  
-            
-        <div class="logo-box">
-            <img src="../img/logo2.png" class="logo2" />
-        </div>
-        <div class="menu">
-            <span class="home" ><a href="../index.jsp">홈</a></span>
-            <span class="best"><a href="../product/best.jsp" >베스트</a></span>
-            <span class="product"><a href="../product/product.jsp?sort=0" >전체상품</a></span>
-            <span class="objet"><a href="../product/product.jsp?sort=1" >소품</a></span>
-            <span class="light"><a href="../product/product.jsp?sort=2" >조명</a></span>
-        </div>
-        <div class="search-box">
-            <div class="search">
-        		<input class="search_input" type="text" placeholder="검색어를 입력해주세요" > 
-                <div>
-                	<a href="#">
-	                	<i class="fas fa-search fa-2x"></i>
-                	</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</nav>
+<div class="super-box">
+	<div class="giant-box">
+	    <div class="oatmeal-box">
+	       	<div class="nav-icons">
+	       		<div>
+	       			<i class="fas fa-question-circle fa-lg"></i>
+	       		</div>
+	       		<div>
+	       			<a href="../cart/cartList.jsp">
+	       				<i class="fas fa-shopping-basket fa-lg"></i>
+	       			</a>
+	   			</div>
+	          	<div>
+		          	<a href="../order/orderList.jsp">
+			          	<i class="fas fa-bars fa-lg" ></i>
+		          	</a>
+	          	</div> 
+	          	
+	   		</div>  
+	            
+	        <div class="logo-box">
+	            <img src="../img/logo2.png" class="logo2" />
+	        </div>
+	        <div class="menu">
+	            <span class="home" ><a href="../index.jsp">홈</a></span>
+	            <span class="best"><a href="../product/best.jsp" >베스트</a></span>
+	            <span class="product"><a href="../product/product.jsp?sort=0" >전체상품</a></span>
+	            <span class="objet"><a href="../product/product.jsp?sort=1" >소품</a></span>
+	            <span class="light"><a href="../product/product.jsp?sort=2" >조명</a></span>
+	        </div>
+	        <div class="search-box">
+	            <div class="search">
+	        		<input class="search_input" type="text" placeholder="검색어를 입력해주세요" > 
+	                <div>
+	                	<a href="#">
+		                	<i class="fas fa-search fa-2x"></i>
+	                	</a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
 <script src="https://kit.fontawesome.com/6478f529f2.js"
 crossorigin="anonymous"></script>

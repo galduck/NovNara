@@ -15,29 +15,26 @@
 </head>
 <body  topmargin="100">
 <%@ include file="../top.jsp" %>
-<div class="product-detail-box">
+<div >
 <form class="product-detail-form" name="cart" action="../cart/cartProc.jsp">
-<table class="product-detail-table" >
-        <tr class="product-detail-table-tr" >
-            <td rowspan="5" colspan="2" class="product-detail-img product-detail-table-td" >
-            	<div><img src="../img/<%=pbean.getImage() %>" height="380" width="430"></div>
-           	</td>
-        </tr>
-        <tr>
-        	<td class="product-name_product-detail product-detail-table-td"><b><%=pbean.getName() %></b></td>
-        </tr>
-		<tr class="product-detail-table-tr">
-			<td class="product-detail-table-td"><b>가    격 : <%=UtilMgr.intFormat(pbean.getPrice())%></b>원</td>
-			
-		</tr>
-		<tr class="product-detail-table-tr">
-			<td class="product-detail-table-td"><b>수    량 : </b><input name="quantity" size="5" value="1">개</td>
-		
-		</tr>
-		<tr class="product-detail-table-tr">
-            <td class="product-detail-table-td"> <input class="put-in-the-cart btn" type="submit" value="장바구니 담기"></td>
-		</tr>
-	</table>
+<div class="super_pd_div">
+<div class="big_pd_div">
+    <div class="img_pd_div">
+		<img src="../img/<%=pbean.getImage() %>" height="380" width="430" class="pd_img_src">
+	</div>
+    <div class="pd_info">
+      <div class="pd_name h1_title"> <%=pbean.getName() %></div>
+      <div class="pd_name">가    격 : <%=UtilMgr.intFormat(pbean.getPrice())%>원</div>
+      <div class="pd_name">수    량 : <input name="quantity" size="5" value="1">개</div>
+      <div class="pd_name"><input type="submit" value="장바구니 담기" class="btn"></div>
+    </div>
+</div>
+</div>
+
+
+
+
+
 		<input type="hidden" name="productNo" value="<%=pbean.getNo()%>">	
 		<input type="hidden" name="flag" value="insert">			
 </form>
