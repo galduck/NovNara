@@ -2,29 +2,29 @@
 <%@page import="java.util.Enumeration"%>
 <%@page import="novNara.OrderBean"%>
 <%@page import="java.util.Hashtable"%>
-<%@page contentType="text/html; charset=EUC-KR"%>
+<%@page contentType="text/html; charset=UTF-8"%>
 <jsp:useBean id="cMgr" class="novNara.CartMgr" scope="session" />
 <jsp:useBean id="pMgr" class="novNara.ProductMgr"/>
 <jsp:useBean id="orderMgr" class="novNara.OrderMgr"/>
 <% 
-		request.setCharacterEncoding("EUC-KR");
-		//¼¼¼Ç¿¡ ÀúÀåµÈ Àå¹Ù±¸´Ï °´Ã¼¸¦ ¸®ÅÏ
+		request.setCharacterEncoding("UTF-8");
+		//ì„¸ì…˜ì— ì €ìž¥ëœ ìž¥ë°”êµ¬ë‹ˆ ê°ì²´ë¥¼ ë¦¬í„´
 		Hashtable<Integer, OrderBean> hCart = cMgr.getCartList();
 		Enumeration<Integer> hCartKey = hCart.keys();
 		String msg = "";
 		if(!hCart.isEmpty()){
 			while(hCartKey.hasMoreElements()){
 				OrderBean order = hCart.get(hCartKey.nextElement());
-				//ÁÖ¹®Ã³¸®
+				//ì£¼ë¬¸ì²˜ë¦¬
 				orderMgr.insertOrder(order);
-				//Àç°íÁ¤¸®
+				//ìž¬ê³ ì •ë¦¬
 				pMgr.reduceProduct(order);
-				//Àå¹Ù±¸´Ï¿¡ ÁÖ¹®ÇÑ »óÇ°»èÁ¦
+				//ìž¥ë°”êµ¬ë‹ˆì— ì£¼ë¬¸í•œ ìƒí’ˆì‚­ì œ
 				cMgr.deleteCart(order);
 			}
-			msg ="ÁÖ¹®Ã³¸® ÇÏ¿´½À´Ï´Ù.";
+			msg ="ì£¼ë¬¸ì²˜ë¦¬ í•˜ì˜€ìŠµë‹ˆë‹¤.";
 		}else{
-			msg = "Àå¹Ù±¸´Ï°¡ ºñ¾ú½À´Ï´Ù.";
+			msg = "ìž¥ë°”êµ¬ë‹ˆê°€ ë¹„ì—ˆìŠµë‹ˆë‹¤.";
 		}
 %>
 <script>

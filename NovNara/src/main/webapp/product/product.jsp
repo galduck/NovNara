@@ -21,11 +21,13 @@
 <body>
 	<%@ include file="../top.jsp" %>
 <div class="one_more_product_cover">
-	<div class="total_product_cover">
+<div class="total_product_cover">
+		
 		<%
 					for(int i=0;i<pvlist.size();i++){
 						ProductBean pbean = pvlist.get(i);
 		%>
+		
 		<div class="total_product">
 			<a href="../product/productDetail.jsp?no=<%=pbean.getNo() %>">
 			<div class="total_product_div total_product_img" >					
@@ -40,9 +42,9 @@
 		</div>
 		
 		<%}%>
-	<%@ include file="../bottom.jsp" %>
 	</div>
 </div>
+	<%@ include file="../bottom.jsp" %>
 </body>
 </html>
 

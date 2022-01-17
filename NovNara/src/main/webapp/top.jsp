@@ -15,7 +15,6 @@
     <button class="btn" ><%=log %></button>
     <button class="btn" ><%=reg%></button>
 </div>
-<div class="super-box">
 	<div class="giant-box">
 	    <div class="oatmeal-box">
 	       	<div class="nav-icons">
@@ -39,7 +38,7 @@
 	            <img src="../img/logo2.png" class="logo2" />
 	        </div>
 	        <div class="menu">
-	            <span class="home" ><a href="../index.jsp">홈</a></span>
+	            <span class="home" ><a href="../notice/notice.jsp">공지사항</a></span>
 	            <span class="best"><a href="../product/best.jsp" >베스트</a></span>
 	            <span class="product"><a href="../product/product.jsp?sort=0" >전체상품</a></span>
 	            <span class="objet"><a href="../product/product.jsp?sort=1" >소품</a></span>
@@ -57,6 +56,5 @@
 	        </div>
 	    </div>
 	</div>
-</div>
 <script src="https://kit.fontawesome.com/6478f529f2.js"
 crossorigin="anonymous"></script>

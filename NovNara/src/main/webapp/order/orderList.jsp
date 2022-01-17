@@ -25,11 +25,11 @@
 	<td align="center" >
 		<table width="95%"   border="1">
 		<tr  align="center"> 
-			<td><font >주문번호</font></td>
-			<td><font >제품</font></td>
-			<td><font >주문수량</font></td>
-			<td><font >주문날짜</font></td>
-			<td><font >주문상태</font></td>
+			<td class="table_td"><font >주문번호</font></td>
+			<td class="table_td"><font >제품</font></td>
+			<td class="table_td"><font >주문수량</font></td>
+			<td class="table_td"><font >주문날짜</font></td>
+			<td class="table_td"><font >주문상태</font></td>
 		</tr>
 		<%
 				Vector<OrderBean> vlist = orderMgr.getOrderList(id);
@@ -48,14 +48,14 @@
 						ProductBean pbean = pMgr.getProduct(productNo);
 		%>
 		<tr align="center">
-			<td><%=order.getNo()%></td>
-			<td>
+			<td class="table_td"><%=order.getNo()%></td>
+			<td class="table_td">
 			<a href="javascript:productDetail('<%=productNo%>')">
 				<%=pbean.getName()%></a>
 			</td>
-			<td><%=order.getQuantity() %></td>
-			<td><%=order.getDate()%></td>
-			<td>
+			<td class="table_td"><%=order.getQuantity() %></td>
+			<td class="table_td"><%=order.getDate()%></td>
+			<td class="table_td">
 			<%
 				switch(order.getState()){
 					case "1": out.print("접수중"); break;

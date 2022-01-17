@@ -3,24 +3,61 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>결제시스템</title>
+<title>NovNara_결제시스템</title>
+<link rel="stylesheet" href="../css/style.css" />
+
 <style>
-span {
-	width: 60px;
-	display: inline-block;
+.payForm_div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+}
+
+.pay_title{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 </style>
 </head>
 <body>
-	<h2>payForm</h2>
-	<form action="payProc.jsp" method="post">
-		<span>name:</span><input name="name" value="홍길동"><br> 
-		<span>이메일:</span><input name="email" value="simba222@naver.com"><br>
-		<span>폰넘버:</span><input name="phone" value="010-3570-6996"><br>
-		<span>주소:</span><input name="address" value="부산광역시 연제구 아시아드대로22번길 36 (거제동, 거제푸르지오)"><br>
-		<span>총가격:</span><input name="totalPrice" value="500"><br> 
-		<input type="submit" value="결제하기"> 
-		<input type="reset" value="취소하기">
+	<%@ include file="../top.jsp" %>
+	<div class="pay_title">
+		<h2 class="h1_title ">payForm</h2>
+	</div>
+<div class="payForm_div">
+	<form action="../payment/payProc.jsp" method="post" >
+		<div class=big-sign-up-box">
+		<div class="sign-up-box">
+		    <h3 class="sign-up">이름</h3>
+		    <input class="sign-up input" name="name" type="text" size="30" value="홍길동">
+		</div>
+		<div class="sign-up-box">
+		    <h3 class="sign-up">이메일</h3>
+		    <input class="sign-up input" name="email" type="email" size="30" value="simba222@naver.com" >
+		</div>
+		<div class="sign-up-box">
+		    <h3 class="sign-up">연락처</h3>
+		    <input class="sign-up input" name="phone" size="30" value="010-3570-6996">
+		</div>
+		<div class="sign-up-box">
+		    <h3 class="sign-up">주소</h3>
+		    <input class="sign-up input" name="address" size="30" value="부산광역시 연제구 아시아드대로22번길 36 (거제동, 거제푸르지오)" >
+		</div>
+		<div class="sign-up-box">
+		    <h3 class="sign-up">총 가격</h3>
+		    <input class="sign-up input" name="totalprice" size="30" value="100">
+		</div>
+		</div>
+		<div class="sign-up-box button-box">
+			<input class="btn" type="submit" value="결제하기"> 
+			<input class="btn" type="reset" value="취소하기">
+		</div>
 	</form>
+</div>
+	
+		<%@ include file="../bottom.jsp" %>
+	
 </body>
 </html>

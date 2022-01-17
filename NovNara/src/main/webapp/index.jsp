@@ -28,13 +28,17 @@
 <nav class="giant-box" >
   <div class="oatmeal-box">
 	<div class="nav-icons">
+		<div>
+   			<a href="./cart/cartList.jsp">
+    		<i class="fas fa-question-circle fa-lg"></i>
+       	</div>
   		<div>
-   			<a href="../cart/cartList.jsp">
+   			<a href="./cart/cartList.jsp">
    				<i class="fas fa-shopping-basket fa-lg"></i>
    			</a>
 		</div>
        	<div>
-	       	<a href="../order/orderList.jsp">
+	       	<a href="./order/orderList.jsp">
 	        	<i class="fas fa-bars fa-lg" ></i>
 	       	</a>
        	</div>
@@ -44,7 +48,7 @@
         <img src="./img/logo2.png" class="logo2" />
     </div>
     <div class="menu">
-        <span class="home" ><a href="./index.jsp">홈</a></span>
+        <span class="home" ><a href="./notice/notice.jsp">공지사항</a></span>
         <span class="best"><a href="./product/best.jsp" >베스트</a></span>
         <span class="product"><a href="./product/product.jsp?sort=0" >전체상품</a></span>
         <span class="objet"><a href="./product/product.jsp?sort=1" >소품</a></span>
