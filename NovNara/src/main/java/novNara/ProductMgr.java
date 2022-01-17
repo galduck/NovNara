@@ -251,6 +251,41 @@ public class ProductMgr {
 			return vlist;
 		}
 	
+		//Search Product
+		public Vector<ProductBean> getSearchList(String keyword){
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			String sql = null;
+			Vector<ProductBean> vlist = new Vector<ProductBean>();
+			try {
+				con = pool.getConnection();
+				sql = "select * from tblProduct where name like ? order by no";
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1,  "%" + keyword + "%");
+				rs = pstmt.executeQuery();
+				while(rs.next()) {
+					ProductBean bean = new ProductBean();
+					bean.setNo(rs.getInt(1));
+					bean.setSort(rs.getInt(2));
+					bean.setName(rs.getString(3));
+					bean.setPrice(rs.getInt(4));
+					bean.setDate(rs.getString(5));
+					bean.setStock(rs.getInt(6));
+					bean.setImage(rs.getString(7));
+					vlist.addElement(bean);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				pool.freeConnection(con, pstmt, rs);
+			}
+			return vlist;
+		}
+		
+		
+		
+		
 }
 
 

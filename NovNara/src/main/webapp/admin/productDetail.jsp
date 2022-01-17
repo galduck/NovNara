@@ -16,7 +16,7 @@
 %>
 <div class="super_div">
 	<div>
-		<h1 class="h1_title "><%=product.getName()%></h1>
+		<h1 class="h1_title pd_title"><%=product.getName()%></h1>
 		<img src="../img/<%=product.getImage()%>" height="380px" width="430px" class="pd_img">
 		<div class="table_td pd_margin">
 		상품이름 : <%=product.getName()%>
