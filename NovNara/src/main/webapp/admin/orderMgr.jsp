@@ -18,20 +18,20 @@
 
 	<table width="95%" align="center">
 	<tr  align="center"> 
-		<td>주문번호</td>
-		<td>주문자<td>
-		<td>제품명</td>
-		<td>주문수량</td>
-		<td>주문날짜</td>
-		<td>주문상태</td>
-		<td>상세보기</td>
+		<td class="table_td">주문번호</td>
+		<td class="table_td">주문자<td>
+		<td class="table_td">제품명</td>
+		<td class="table_td">주문수량</td>
+		<td class="table_td">주문날짜</td>
+		<td class="table_td">주문상태</td>
+		<td class="table_td">상세보기</td>
 	</tr>
 	<%
 			Vector<OrderBean> vlist = orderMgr.getOrderList();
 			if(vlist.isEmpty()){
 	%>
 	<tr>
-		<td align="center" colspan="7">주문내역이 없습니다.</td>
+		<td class="table_td" align="center" colspan="7">주문내역이 없습니다.</td>
 	</tr>
 	<%}else{
 			for(int i=0;i<vlist.size();i++){
@@ -39,12 +39,12 @@
 				ProductBean product/*제품정보*/ = pMgr.getProduct(order.getProductNo());
 	%>
 	<tr align="center">
-		<td><%=order.getNo()%></td>
-		<td><%=order.getId()%></td>
-		<td><%=product.getName()%></td>
-		<td><%=order.getQuantity()%></td>
-		<td><%=order.getDate()%></td>
-		<td>
+		<td class="table_td"><%=order.getNo()%></td>
+		<td class="table_td"><%=order.getId()%></td>
+		<td class="table_td"><%=product.getName()%></td>
+		<td class="table_td"><%=order.getQuantity()%></td>
+		<td class="table_td"><%=order.getDate()%></td>
+		<td class="table_td">
 		<%
 			switch(order.getState()){
 				case "1" : out.println("접수중");break;
@@ -56,7 +56,7 @@
 			}
 		%>
 		</td>
-		<td><a href="javascript:orderDetail('<%=order.getNo()%>')">상세보기</a></td>
+		<td class="table_td"><a href="javascript:orderDetail('<%=order.getNo()%>')">상세보기</a></td>
 	</tr>			
 	<%	
 				}//---for

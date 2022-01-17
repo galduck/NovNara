@@ -5,20 +5,20 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css">
 <script src="script.js"></script>
 </head>
-<body bgcolor="#996600" topmargin="100">
+<body topmargin="100">
 	<%@ include file="top.jsp" %>
 	<form method="post" action="productProc.jsp?flag=insert" enctype="multipart/form-data">
-	<table width="75%" align="center" bgcolor="#FFFF99">
+	<table width="75%" align="center" >
 	<tr> 
-	<td align="center" bgcolor="#FFFFCC">
-		<table width="95%" bgcolor="#FFFF99" border="1">
-		<tr bgcolor="#996600"> 
+	<td align="center">
+		<table width="95%" border="1">
+		<tr> 
 		<td colspan="2" align="center">
-			<font color="#FFFFFF">상품 등록</font>
+			상품 등록
 		</td>
 		</tr>
 		<tr> 
-			<td align="center">구분 (0:소품, 1:등)</td>
+			<td align="center">구분 (1:소품, 2:등)</td>
 			<td align="left"><input name="sort" size="5"></td>
 		</tr>
 		<tr> 
@@ -43,8 +43,8 @@
 		</tr>
 		<tr> 
 		<td colspan="2" align="center"> 
-			<input type="submit" value="상품등록">&nbsp;&nbsp;&nbsp;
-			<input type="reset" value="다시쓰기">
+			<input class="btn" type="submit" value="상품등록">&nbsp;&nbsp;&nbsp;
+			<input class="btn" type="reset" value="다시쓰기">
 		</td>
 		</tr>
 		</table>

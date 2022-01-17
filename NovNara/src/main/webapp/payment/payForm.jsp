@@ -27,7 +27,7 @@
 		<h2 class="h1_title ">payForm</h2>
 	</div>
 <div class="payForm_div">
-	<form action="../payment/payProc.jsp" method="post" >
+	<form action="../payment/payProc.jsp" method="get" >
 		<div class=big-sign-up-box">
 		<div class="sign-up-box">
 		    <h3 class="sign-up">이름</h3>
@@ -47,7 +47,7 @@
 		</div>
 		<div class="sign-up-box">
 		    <h3 class="sign-up">총 가격</h3>
-		    <input class="sign-up input" name="totalprice" size="30" value="100">
+		    <input class="sign-up input" name="totalPrice" size="30">
 		</div>
 		</div>
 		<div class="sign-up-box button-box">

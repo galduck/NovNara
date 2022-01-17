@@ -18,27 +18,27 @@
 
 		<table width="95%" align="center">
 		<tr align="center"> 
-			<td>회원이름</td>
-			<td>회원아이디</td>
-			<td>패스워드</td>
-			<td>성별</td> 
-			<td>생년월일</td> 
-			<td>이메일</td>
-			<td>수정</td>
-			<td>메일보내기</td>
+			<td class="table_td">회원이름</td>
+			<td class="table_td">회원아이디</td>
+			<td class="table_td">패스워드</td>
+			<td class="table_td">성별</td> 
+			<td class="table_td">생년월일</td> 
+			<td class="table_td">이메일</td>
+			<td class="table_td">수정</td>
+			<td class="table_td">메일보내기</td>
 		</tr>
 		<%
 		for(int i=0; i<vlist.size(); i++){
 			MemberBean mBean = vlist.get(i);
 		%>
 		<tr align="center"> 
-			<td><%=mBean.getId()%></td>
-			<td><%=mBean.getPwd()%></td>
-			<td>
+			<td class="table_td"><%=mBean.getId()%></td>
+			<td class="table_td"><%=mBean.getPwd()%></td>
+			<td class="table_td">
 			</td>
-			<td><%=mBean.getEmail()%></td>
-			<td><a href="javascript:update('<%=mBean.getId()%>')">수정하기</a></td>
-			<td>
+			<td class="table_td"><%=mBean.getEmail()%></td>
+			<td class="table_td"><a href="javascript:update('<%=mBean.getId()%>')">수정하기</a></td>
+			<td class="table_td">
 			<a href="sendAccount.jsp?id=<%=mBean.getId()%>">메일보내기</a>
 			</td>
 		</tr>

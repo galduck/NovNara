@@ -16,12 +16,12 @@
 		<td align="center">
 		<table width="95%" align="center">
 			<tr  align="center">
-				<td>구분</td>
-				<td>이름</td>
-				<td>가격</td>
-				<td>날짜</td>
-				<td>재고</td>
-				<td>&nbsp;</td>
+				<td class="table_td">구분</td>
+				<td class="table_td">이름</td>
+				<td class="table_td">가격</td>
+				<td class="table_td">날짜</td>
+				<td class="table_td">재고</td>
+				<td class="table_td">&nbsp;</td>
 			</tr>
 			<%
 				int sort = 0; 
@@ -34,7 +34,7 @@
 			%>
 		
 			<tr>
-				<td align="center" colspan="5">등록된 상품이 없습니다.</td>
+				<td class="table_td" align="center" colspan="5">등록된 상품이 없습니다.</td>
 			</tr>
 			<%
 				} else {
@@ -42,12 +42,12 @@
 						ProductBean product = vResult.get(i);
 			%>
 			<tr  align="center">
-				<td><%=UtilMgr.intFormat(product.getSort())%></td>
-				<td><%=product.getName()%></td>
-				<td><%=UtilMgr.intFormat(product.getPrice())%></td>
-				<td><%=product.getDate()%></td>
-				<td><%=UtilMgr.intFormat(product.getStock())%></td>
-				<td>
+				<td class="table_td"><%=UtilMgr.intFormat(product.getSort())%></td>
+				<td class="table_td"><%=product.getName()%></td>
+				<td class="table_td"><%=UtilMgr.intFormat(product.getPrice())%></td>
+				<td class="table_td"><%=product.getDate()%></td>
+				<td class="table_td"><%=UtilMgr.intFormat(product.getStock())%></td>
+				<td class="table_td">
 				<a href="javascript:productDetail('<%=product.getNo()%>')">상세보기</a></td>
 			</tr>
 			<%

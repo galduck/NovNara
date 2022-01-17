@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>NovNara_결제시스템</title>
-<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../organize.css" />
 
 <style>
 span {
