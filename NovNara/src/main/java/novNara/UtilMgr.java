@@ -57,4 +57,5 @@ public class UtilMgr {
 			String name) {
 		return Integer.parseInt(request.getParameter(name));
 	}
+	
 }

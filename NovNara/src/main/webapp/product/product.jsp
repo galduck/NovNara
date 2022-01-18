@@ -5,26 +5,22 @@
 <%@page contentType="text/html; charset=UTF-8"%>
 <jsp:useBean id="pMgr" class="novNara.ProductMgr"/>
 <%
+	request.setCharacterEncoding("UTF-8");
 	int sort = 0;
 	//검색에 필요한 변수
-	String keyField = "", keyWord = "";
+	String keyWord = "";
+	Vector<ProductBean> pvlist = null;
 	//검색일때
 	if(request.getParameter("keyWord")!=null){
-		keyField = request.getParameter("keyField");
 		keyWord = request.getParameter("keyWord");
-	}
-	
-	//검색 후에 다시 처음화면 요청
-	if(request.getParameter("reload")!=null&&
-	request.getParameter("reload").equals("true")){
-		keyField = ""; keyWord = "";
-	}
-	
-	if(request.getParameter("sort")!=null){
+		pvlist = pMgr.getSearchList(keyWord);
+	}else if(request.getParameter("sort")!=null){
 		sort = UtilMgr.parseInt(request, "sort");
+		pvlist = pMgr.getProductList(sort);
+	}else{
+		pvlist = pMgr.getProductList(sort);
 	}
-	request.setCharacterEncoding("UTF-8");
-	Vector<ProductBean> pvlist = pMgr.getProductList(sort);
+
 %>
 <html>
 <head>

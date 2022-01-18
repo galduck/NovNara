@@ -21,8 +21,6 @@
 			<td class="table_td">회원이름</td>
 			<td class="table_td">회원아이디</td>
 			<td class="table_td">패스워드</td>
-			<td class="table_td">성별</td> 
-			<td class="table_td">생년월일</td> 
 			<td class="table_td">이메일</td>
 			<td class="table_td">수정</td>
 			<td class="table_td">메일보내기</td>

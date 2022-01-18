@@ -166,26 +166,24 @@ public class ProductMgr {
 					MAXPOSTSIZE, ENCODING, new DefaultFileRenamePolicy());
 			con = pool.getConnection();
 			if(multi.getFilesystemName("image")!=null) {//이미지도 수정
-				sql = "update tblProduct set sort=?, name=?, price=?,"
-						+ "detail=?, stock=?, image=? where no=?";
+				sql = "update tblProduct set name=?, price=?, "
+						+ " detail=?, stock=?, image=? where no=?";
 				pstmt = con.prepareStatement(sql);
-				pstmt.setInt(1, Integer.parseInt(multi.getParameter("sort")));
-				pstmt.setString(2, multi.getParameter("name"));
-				pstmt.setInt(3, Integer.parseInt(multi.getParameter("price")));
-				pstmt.setString(4, multi.getParameter("detail"));
-				pstmt.setInt(5, Integer.parseInt(multi.getParameter("stock")));
-				pstmt.setString(6, multi.getFilesystemName("image"));
-				pstmt.setInt(7, Integer.parseInt(multi.getParameter("no")));
-			}else {//이미지 수정 아님.
-				sql = "update tblProduct set sort=?, name=?, price=?,"
-						+ "detail=?, stock=? where no=?";
-				pstmt = con.prepareStatement(sql);
-				pstmt.setInt(1, Integer.parseInt(multi.getParameter("sort")));
-				pstmt.setString(2, multi.getParameter("name"));
-				pstmt.setInt(3, Integer.parseInt(multi.getParameter("price")));
-				pstmt.setString(4, multi.getParameter("detail"));
-				pstmt.setInt(5, Integer.parseInt(multi.getParameter("stock")));
+				pstmt.setString(1, multi.getParameter("name"));
+				pstmt.setInt(2, Integer.parseInt(multi.getParameter("price")));
+				pstmt.setString(3, multi.getParameter("detail"));
+				pstmt.setInt(4, Integer.parseInt(multi.getParameter("stock")));
+				pstmt.setString(5, multi.getFilesystemName("image"));
 				pstmt.setInt(6, Integer.parseInt(multi.getParameter("no")));
+			}else {//이미지 수정 아님.
+				sql = "update tblProduct set name=?, price=?, "
+						+ " detail=?, stock=? where no=?";
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, multi.getParameter("name"));
+				pstmt.setInt(2, Integer.parseInt(multi.getParameter("price")));
+				pstmt.setString(3, multi.getParameter("detail"));
+				pstmt.setInt(4, Integer.parseInt(multi.getParameter("stock")));
+				pstmt.setInt(5, Integer.parseInt(multi.getParameter("no")));
 			}
 			if(pstmt.executeUpdate()==1) flag = true;
 		} catch (Exception e) {
@@ -216,7 +214,6 @@ public class ProductMgr {
 		}
 		return flag;
 	}
-	
 
 	
 	//Stock List
@@ -260,7 +257,7 @@ public class ProductMgr {
 			Vector<ProductBean> vlist = new Vector<ProductBean>();
 			try {
 				con = pool.getConnection();
-				sql = "select * from tblProduct where name like ? order by no";
+				sql = "select no, sort, name, price, date, stock, image from tblProduct where name like ? order by no";
 				pstmt = con.prepareStatement(sql);
 				pstmt.setString(1,  "%" + keyword + "%");
 				rs = pstmt.executeQuery();
@@ -281,11 +278,7 @@ public class ProductMgr {
 				pool.freeConnection(con, pstmt, rs);
 			}
 			return vlist;
-		}
-		
-		
-		
-		
+		}	
 }
 
 

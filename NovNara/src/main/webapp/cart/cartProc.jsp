@@ -7,7 +7,7 @@
 		request.setCharacterEncoding("EUC-KR");
 		String id = (String)session.getAttribute("idKey");
 		if(id==null){
-			response.sendRedirect("login.jsp");
+			response.sendRedirect("../login/login.jsp");
 			return;//이후에 코드는 무력화를 위한 목적
 		}
 		order.setId(id);//주문자 id 저장
@@ -27,7 +27,7 @@
 %>
 <script>
 	alert("<%=msg%>");
-	location.href = "cartList.jsp";
+	location.href = "../cart/cartList.jsp";
 </script>
 
 

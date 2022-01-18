@@ -37,12 +37,11 @@
 		<span class="span_padding">상품설명:</span>		
 		<textarea class="span_padding" rows="10" cols="45" name="detail"></textarea><br>
 		<span class="span_padding">상품수량:</span>
-		<input class="span_padding" name="totalPrice" value="500"> 
 		<input class="span_padding" name="stock" size="10">개<br>
 		<span class="span_padding">상품이미지:</span>		
 		<input class="span_padding" type="file" name="image"><br>
 		
-			<input class="btn" type="submit" value="결제하기">&nbsp;&nbsp;&nbsp;
+			<input class="btn" type="submit" value="상품등록">&nbsp;&nbsp;&nbsp;
 			<input class="btn" type="reset" value="취소하기">
 	
 	</form>
