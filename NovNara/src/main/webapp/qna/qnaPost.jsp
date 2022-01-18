@@ -4,17 +4,13 @@
 <html>
 <head>
 <title>JSP Qna</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
 </head>
-<body bgcolor="#FFFFCC">
+<body>
+	<%@ include file="../top.jsp" %>
 <div align="center">
-<br/><br/>
-<table width="600" cellpadding="3">
-	<tr>
-		<td bgcolor="84F399" height="25" align="center">글쓰기</td>
-	</tr>
-</table>
-<br/>
+<h3 class="h1_title">글쓰기</h3>
+
 <form name="postFrm" method="post" action="../qna/qnaPost" 
 enctype="multipart/form-data">
 <table width="600" cellpadding="3" align="center">
@@ -22,8 +18,8 @@ enctype="multipart/form-data">
 		<td align=center>
 		<table align="center">
 			<tr>
-				<td width="10%">성 명</td>
-				<td width="90%">
+				<td width="20%">성 명</td>
+				<td width="80%">
 				<input name="name" size="10" maxlength="8"></td>
 			</tr>
 			<tr>

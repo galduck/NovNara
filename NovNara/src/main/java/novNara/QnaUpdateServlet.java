@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
-@WebServlet("/Qna/QnaUpdate2")
+@WebServlet("/qna/qnaUpdate")
 public class QnaUpdateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -35,7 +35,7 @@ public class QnaUpdateServlet extends HttpServlet {
 			mgr.updateQna2(multi);
 			String nowPage = multi.getParameter("nowPage");
 			String numPerPage = multi.getParameter("numPerPage");
-			response.sendRedirect("../qna/qnaRead.jsp?nowPage="+nowPage
+			response.sendRedirect("qnaRead.jsp?nowPage="+nowPage
 					+"&numPerPage="+numPerPage+"&num="+bean.getNum());
 		}else{//비번 틀렸다고 경고창
 			PrintWriter out = response.getWriter();

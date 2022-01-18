@@ -41,11 +41,12 @@
 	}
 </script>
 </head>
-<body bgcolor="#FFFFCC">
+<body >
+	<%@ include file="../top.jsp" %>
 <div align="center"><br/><br/>
 	<table width="50%" cellspacing="0" cellpadding="3">
 		<tr>
-			<td bgcolor=#dddddd height="21" align="center">
+			<td class="table_td"  bgcolor=#dddddd height="21" align="center">
 				사용자의 비밀번호를 입력해주세요.
 			</td>
 		</tr>
@@ -53,18 +54,18 @@
 	<form name="delFrm" method="post">
 		<table width="70%" cellspacing="0" cellpadding="2">
 			<tr>
-				<td align="center">
+				<td  class="table_td" align="center">
 					<table width=80%>
 						<tr>
-							<td align="center">
+							<td  class="table_td" align="center">
 								<input type="password" name="pass" size="17" maxlength="15">
 							</td>
 						</tr>
 						<tr>
-							<td><hr size="1" color="#eeeeee"/></td>
+							<td class="table_td" ><hr size="1" color="#eeeeee"/></td>
 						</tr>
 						<tr>
-							<td align="center">
+							<td  class="table_td" align="center">
 								<input type="button" value="삭제완료" onClick="check()"> 
 								<input type="reset" value="다시쓰기">
 								<input type="button" value="뒤로" onClick="history.go(-1)">
@@ -79,5 +80,7 @@
 	</form>
 </div>
 <%}%>
+	<%@ include file="../bottom.jsp" %>
+
 </body>
 </html>

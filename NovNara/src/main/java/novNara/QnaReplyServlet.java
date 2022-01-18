@@ -7,13 +7,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/qna/qnaReply")
+@WebServlet("/qna/QnaReply")
 public class QnaReplyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		request.setCharacterEncoding("EUC-KR");
+		request.setCharacterEncoding("UTF-8");
 		QnaMgr mgr = new QnaMgr();
 		QnaBean reBean = new QnaBean();
 		reBean.setName(request.getParameter("name"));

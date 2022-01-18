@@ -58,8 +58,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>JSP Qna</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+<title>NovNara</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">
 	function check() {
 		if(document.searchFrm.keyWord.value==""){
@@ -76,13 +76,13 @@
 	}
 	
 	function list() {//검색을 통해서 url에 남은 get방식 조건값 초기화
-		document.listFrm.action="list.jsp";
+		document.listFrm.action="../qna/qnaList.jsp";
 		document.listFrm.submit();
 	}
 	//list.jsp -> read.jsp 조건 : keyField, keyWord, nowPage, numPerPage
 	function read(num) {
 		document.readFrm.num.value=num;
-		document.readFrm.action="read.jsp";
+		document.readFrm.action="../qna/qnaRead.jsp";
 		document.readFrm.submit();
 	}
 	
@@ -97,16 +97,18 @@
 	}
 </script>
 </head>
-<body bgcolor="#FFFFCC" >
+<body  >
+	<%@ include file="../top.jsp" %>
+
 <div align="center"><br>
-<h2>JSP Qna</h2><br>
+<h2 class="h1_title">Q&A</h2><br>
 <table>
 	<tr>
-		<td width="600">
+		<td class="table_td" width="600">
 		<b>Total : <%=totalRecord%>Articles(
 		<font color="red"><%=nowPage%>/<%=totalPage%></font>)</b>
 		</td>
-		<td align="right">
+		<td class="table_td" align="right">
 			<form name="npFrm" method="post">
 				<select name="numPerPage" size="1" 
 				onchange="numPerFn(this.form.numPerPage.value)">
@@ -124,7 +126,7 @@
 </table>
 <table>
 	<tr>
-		<td align="center" colspan="2"> 
+		<td class="table_td" align="center" colspan="2"> 
 		<%
 				Vector<QnaBean> vlist = mgr.getQnaList(keyField, keyWord, start, cnt);
 				int listSize = vlist.size();//브라우저 화면에 표시될 번호
@@ -134,11 +136,11 @@
 		%>
 			<table cellspacing="0">
 				<tr bgcolor="#D0D0D0">
-					<th width="100">번 호</th>
-					<th width="250">제 목</th>
-					<th width="100">이 름</th>
-					<th width="150">날 짜</th>
-					<th width="100">조회수</th>
+					<th  class="table_td" width="100">번 호</th>
+					<th  class="table_td" width="250">제 목</th>
+					<th  class="table_td" width="100">이 름</th>
+					<th  class="table_td" width="150">날 짜</th>
+					<th  class="table_td" width="100">조회수</th>
 				</tr>
 		<% 
 				for(int i=0;i<numPerPage;i++){
@@ -155,20 +157,20 @@
 					int bcount = cmgr.getQnaCommentCount(num);
 		%>
 				<tr align="center"> 
-					<td><%=totalRecord-start-i%></td>
-					<td align="left">
+					<td class="table_td" ><%=totalRecord-start-i%></td>
+					<td  class="table_td" align="left">
 						<%for(int j=0;j<depth;j++){%>&nbsp;&nbsp;<%}//---for%>
 						<a href="javascript:read('<%=num%>')"><%=subject%></a>
 						<%if(filename!=null&&!filename.equals("")){%>
-							<img alt="파일첨부" src="img/icon_file.gif" align="middle">
+							<img src="img/icon_file.gif"   align="middle">
 						<%}%>
 						<%if(bcount>0) {%>
 							<font color="red">(<%=bcount%>)</font>
 						<%}%>
 					</td>
-					<td><%=name%></td>1
-					<td><%=regdate%></td>
-					<td><%=count%></td>
+					<td class="table_td" ><%=name%></td>
+					<td class="table_td" ><%=regdate%></td>
+					<td class="table_td" ><%=count%></td>
 				</tr>
 		<%}//--for%>
 			</table>
@@ -176,10 +178,10 @@
 		</td>
 	</tr>
 	<tr> 
-		<td colspan="2"><br><br></td>
+		<td  class="table_td" colspan="2"><br><br></td>
 	</tr>
 	<tr>
-		<td>
+		<td class="table_td" >
 		<%if(totalRecord>0){ %>
 			<!-- 이전 블럭 -->
 			<%if(nowBlock>1){%>
@@ -204,18 +206,18 @@
 			<%}%>
 			<%}//---if1%>
 		</td>
-		<td align="right"> 
-			<a href="post.jsp">[글쓰기]</a>
+		<td class="table_td"  align="right"> 
+			<a href="../qna/qnaPost.jsp">[글쓰기]</a>
 			<a href="javascript:list()">[처음으로]</a>
 		</td>
 	</tr>
 </table>
 <hr width="750">
 <!-- 검색 Form Start -->
-<form name="searchFrm" method="get" action="list.jsp">
+<form name="searchFrm" method="get" action="../qna/qnaList.jsp">
 	<table  width="600" cellpadding="4" cellspacing="0">
  		<tr>
-  			<td align="center" valign="bottom">
+  			<td class="table_td"  align="center" valign="bottom">
    				<select name="keyField" size="1" >
     				<option value="name"> 이 름</option>
     				<option value="subject"> 제 목</option>
@@ -242,5 +244,6 @@
 	<input type="hidden" name="nowPage" value="1">
 </form>
 </div>
+	<%@ include file="../bottom.jsp" %>
 </body>
 </html>

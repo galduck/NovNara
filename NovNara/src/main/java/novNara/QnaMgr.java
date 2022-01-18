@@ -15,8 +15,8 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 public class QnaMgr {
 
 	private DBConnectionMgr pool;
-	public static final String SAVEDIRECTORY = "C:/Jsp/eclipse-workspace/myapp/src/main/webapp/Qna/fileupload/";
-	public static final String ENCODING = "EUC-KR";
+	public static final String SAVEDIRECTORY = "D:/Jsp/NovNara/NovNara/src/main/webapp/qna/qnaFileUpload";
+	public static final String ENCODING = "UTF-8";
 	public static final int MAXPOSTSIZE = 10*1024*1024;//10mb
 	
 	public QnaMgr() {	
@@ -252,28 +252,6 @@ public class QnaMgr {
 		}
  	}
 	
-	//Qna Update : 게시물 수정
- 	//name, subject, content 3개만 수정
- 	public void updateQna(QnaBean bean) {
- 		Connection con = null;
-		PreparedStatement pstmt = null;
-		String sql = null;
-		try {
-			con = pool.getConnection();
-			sql = "update tblQna set name=?, subject=?, content=? where num=?";
-			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, bean.getName());
-			pstmt.setString(2, bean.getSubject());
-			pstmt.setString(3, bean.getContent());
-			pstmt.setInt(4, bean.getNum());
-			pstmt.executeUpdate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			pool.freeConnection(con, pstmt);
-		}
- 	}
- 	
 	
 	//Qna Update2 : 게시물 수정 (업로드 파일까지 수정)
 	public void updateQna2(MultipartRequest mulit) {
@@ -369,31 +347,4 @@ public class QnaMgr {
 		}
  	}
 	
-	//Post 1000 : 게시물 1000개 입력
-	public void post1000(){
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		String sql = null;
-		try {
-			con = pool.getConnection();
-			sql = "insert tblQna(name,content,subject,ref,pos,depth,regdate,pass,count,ip,filename,filesize)";
-			sql+="values('aaa', 'bbb', 'ccc', 0, 0, 0, now(), '1111',0, '127.0.0.1', null, 0);";
-			pstmt = con.prepareStatement(sql);
-			for (int i = 0; i < 1000; i++) {
-				pstmt.executeUpdate();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			pool.freeConnection(con, pstmt);
-		}
-	}
-	
-	public static void main(String[] args) {
-		QnaMgr mgr = new QnaMgr();
-		//mgr.insertQna(null);
-		//System.out.println("폴더생성확인");
-		mgr.post1000();
-		//System.out.println(10.0/3);//실수/정수 -> 실수/실수
-	}
 }

@@ -32,7 +32,7 @@
    <td bgcolor="#FF9018"  height="21" align="center">수정하기2</td>
   </tr>
 </table>
-<form name="updateFrm" method="post" action="QnaUpdate2" enctype="multipart/form-data">
+<form name="updateFrm" method="post" action="qnaUpdate" enctype="multipart/form-data">
 <table width="600" cellpadding="7">
  <tr>
   <td>

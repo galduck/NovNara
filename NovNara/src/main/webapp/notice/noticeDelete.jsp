@@ -28,7 +28,7 @@
 			<%}
 		}else{//비번을 입력받기 위한 폼 출력
 %>
-<title>JSP Notice</title>
+<title>NovNara</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">
 	function check() {
