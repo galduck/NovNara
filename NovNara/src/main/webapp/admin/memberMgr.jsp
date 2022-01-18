@@ -37,7 +37,7 @@
 			<td class="table_td"><%=mBean.getEmail()%></td>
 			<td class="table_td"><a href="javascript:update('<%=mBean.getId()%>')">수정하기</a></td>
 			<td class="table_td">
-			<a href="sendAccount.jsp?id=<%=mBean.getId()%>">메일보내기</a>
+			<a href="../admin/sendAccount.jsp?id=<%=mBean.getId()%>">메일보내기</a>
 			</td>
 		</tr>
 		<%}%>
@@ -47,7 +47,7 @@
 </table>
 </div>
 	<%@ include file="../bottom.jsp" %>
-	<form name="update" method="post" action="memberUpdate.jsp">
+	<form name="update" method="post" action="../admin/memberUpdate.jsp">
 	<input type=hidden name="id">
 	</form>
 </body>

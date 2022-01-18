@@ -12,9 +12,12 @@
 <nav class="giant-box">
     <div class="oatmeal-box">
         <div class="nav-icons">
-            <i class="fas fa-shopping-basket fa-lg"><a href="../cart/cartList.jsp"></a></i>
-         <i class="fas fa-bars fa-lg" ><a href="../order/orderList.jsp"></a></i>
-        </div>  
+       		<div>
+       			<a href="../qna/qna.jsp">
+       				<i class="fas fa-question-circle fa-lg"></i>
+       			</a>
+       		</div>
+   		</div>  
         <div class="logo-box">
             <img src="../img/logo2.png" class="logo2" />
         </div>
@@ -24,11 +27,7 @@
             <span class="objet"><a href="productMgr.jsp" >상품관리</a></span>
             <span class="light"><a href="orderMgr.jsp">주문관리</a></span>
         </div>
-        <div class="search-box">
-            <div class="search">
-                <i class="fas fa-search fa-2x"></i>
-            </div>
-        </div>
+        
     </div>
 </nav>
 

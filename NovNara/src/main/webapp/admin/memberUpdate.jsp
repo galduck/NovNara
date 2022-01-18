@@ -6,44 +6,42 @@
 <jsp:useBean id="mMgr" class="novNara.MemberMgr" />
 <html>
 <head>
-<title>회원수정</title>
-<link href="../style.css" rel="stylesheet" type="text/css">
+<title>NovNara</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
 <script src="script.js"></script>
 </head>
-<body bgcolor="#996600">
+<body>
 	<br>
 	<%@ include file="top.jsp"%>
 	<%
 		String id = request.getParameter("id");
 		MemberBean mBean = mMgr.getMember(id);
 	%>
-	<form name="regForm" method="post" action="memberUpdateProc.jsp">
-		<table width="75%" align="center" bgcolor="#FFFF99">
+<div class="giant-box" >
+<h3 class="h1_title"><%=mBean.getId()%> 회원님의 정보를 수정합니다.</h3>
+	<form name="regForm" method="post" action="../admin/memberUpdateProc.jsp">
+		<table width="75%" align="center">
 			<tr>
-				<td align="center" bgcolor="#FFFFCC">
-					<table width="95%" align="center" bgcolor="#FFFF99" border="1">
-						<tr align="center" bgcolor="#996600">
-							<td colspan="3"><font color="#FFFFFF"><b> <%=mBean.getId()%>
-										회원님의 정보를 수정합니다.
-								</b></font></td>
+				<td  class="table_td" align="center" >
+					<table width="95%" align="center"  border="1">
+
+						<tr>
+							<td class="table_td" >아이디</td>
+							<td class="table_td" ><%=mBean.getId()%></td>
 						</tr>
 						<tr>
-							<td>아이디</td>
-							<td><%=mBean.getId()%></td>
+							<td class="table_td" >패스워드</td>
+							<td class="table_td" ><input name="pwd" value="<%=mBean.getPwd()%>"></td>
 						</tr>
 						<tr>
-							<td>패스워드</td>
-							<td><input name="pwd" value="<%=mBean.getPwd()%>"></td>
-						</tr>
-						<tr>
-							<td>이메일</td>
-							<td><input name="email" size="30"
+							<td class="table_td" >이메일</td>
+							<td class="table_td" ><input name="email" size="30"
 								value="<%=mBean.getEmail()%>"></td>
 						</tr>
 						<tr>
-							<td colspan="2" align="center"><input type="submit"
+							<td class="table_td" colspan="2" align="center"><input class="btn" type="submit"
 								value="수정완료"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-								<input type="reset" value="다시쓰기"></td>
+								<input class="btn" type="reset" value="다시쓰기"></td>
 						</tr>
 						<input type="hidden" name="id" value="<%=id%>">
 					</table>
@@ -51,6 +49,7 @@
 			</tr>
 		</table>
 	</form>
+</div>
 	<%@ include file="../bottom.jsp"%>
 </body>
 </html>

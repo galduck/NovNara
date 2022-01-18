@@ -19,7 +19,9 @@
     <div class="oatmeal-box">
        	<div class="nav-icons">
        		<div>
-       			<i class="fas fa-question-circle fa-lg"></i>
+       			<a href="../qnd/qna.jsp">
+       				<i class="fas fa-question-circle fa-lg"></i>
+       			</a>
        		</div>
        		<div>
        			<a href="../cart/cartList.jsp">

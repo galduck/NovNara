@@ -9,7 +9,7 @@
 %>
 		<script>
 			alert("성공적으로 수정하였습니다");
-			location.href="memberMgr.jsp";
+			location.href="../admin/memberMgr.jsp";
 		</script>
 <%
 	}else{

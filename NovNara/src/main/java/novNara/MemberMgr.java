@@ -123,7 +123,7 @@ public class MemberMgr {
 		boolean flag = false;
 		try {
 			con = pool.getConnection();
-			sql = "update tblMember set pwd=? email=? where id=?";
+			sql = "update tblMember set pwd=?, email=? where id=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, bean.getPwd());
 			pstmt.setString(2, bean.getEmail());

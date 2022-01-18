@@ -98,7 +98,7 @@
 </head>
 <body>
 	<%@ include file="../top.jsp" %>
-<div align="center">
+<div class="table_title">
 <h2 class="h1_title">Notice</h2><br>
 <table>
 	<tr>
@@ -201,14 +201,14 @@
 			<%}//---if1%>
 		</td>
 		<td class="table_td" align="right"> 
-			<a href="noticePost.jsp">[글쓰기]</a>
+			<a href="../notice/noticePost.jsp">[글쓰기]</a>
 			<a href="javascript:noticeList()">[처음으로]</a>
 		</td>
 	</tr>
 </table>
 <hr width="750">
 <!-- 검색 Form Start -->
-<form name="searchFrm" method="get" action="list.jsp">
+<form name="searchFrm" method="get" action="../notice/noticeList.jsp">
 	<table  width="600" cellpadding="4" cellspacing="0">
  		<tr>
   			<td class="table_td" align="center" valign="bottom">
