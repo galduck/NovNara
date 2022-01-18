@@ -19,7 +19,7 @@
     <div class="oatmeal-box">
        	<div class="nav-icons">
        		<div>
-       			<a href="../qnd/qna.jsp">
+       			<a href="../qna/qna.jsp">
        				<i class="fas fa-question-circle fa-lg"></i>
        			</a>
        		</div>
