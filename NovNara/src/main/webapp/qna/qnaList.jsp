@@ -138,7 +138,7 @@
 				<tr bgcolor="#D0D0D0">
 					<th  class="table_td" width="100">번 호</th>
 					<th  class="table_td" width="250">제 목</th>
-					<th  class="table_td" width="100">이 름</th>
+					<th  class="table_td" width="100">아이디</th>
 					<th  class="table_td" width="150">날 짜</th>
 					<th  class="table_td" width="100">조회수</th>
 				</tr>
@@ -219,7 +219,7 @@
  		<tr>
   			<td class="table_td"  align="center" valign="bottom">
    				<select name="keyField" size="1" >
-    				<option value="name"> 이 름</option>
+    				<option value="name"> 아이디</option>
     				<option value="subject"> 제 목</option>
     				<option value="content"> 내 용</option>
    				</select>
