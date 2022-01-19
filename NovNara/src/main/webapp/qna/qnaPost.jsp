@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<!-- HTML5 선언 -->
+<%@ page import="java.util.*,novNara.*"%>
+<jsp:useBean id="mMgr" class="novNara.MemberMgr" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +9,9 @@
 </head>
 <body>
 	<%@ include file="../top.jsp" %>
+	<%
+		MemberBean mBean = mMgr.getMember(id);
+	%>
 <div align="center">
 <h3 class="h1_title">Q&A 글쓰기</h3>
 
@@ -18,9 +22,9 @@ enctype="multipart/form-data">
 		<td class="table_td" align=center>
 		<table align="center">
 			<tr>
-				<td class="table_td" width="20%">성 명</td>
+				<td class="table_td" width="20%">아이디</td>
 				<td class="table_td" width="80%">
-				<input name="name" size="10" maxlength="8"></td>
+				<%=mBean.getId()%></td>
 			</tr>
 			<tr>
 				<td class="table_td" >제 목</td>

@@ -91,7 +91,7 @@
 				<button class="btn" onclick="sendPay('<%=totalPrice%>')">주문하기</button>
 			</td>
 		</tr>
-		<%}//--fi-else %>
+		<%}//--if-else %>
 	</table>
 </td>
 </tr>

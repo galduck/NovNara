@@ -23,11 +23,17 @@
        				<i class="fas fa-question-circle fa-lg"></i>
        			</a>
        		</div>
+       		
        		<div>
        			<a href="../cart/cartList.jsp">
        				<i class="fas fa-shopping-basket fa-lg"></i>
        			</a>
    			</div>
+   			<div>
+       			<a href="../member/memberUpdate.jsp">
+       				<i class="fas fa-user-edit fa-lg"></i>
+       			</a>
+       		</div>
           	<div>
 	          	<a href="../order/orderList.jsp">
 		          	<i class="fas fa-bars fa-lg" ></i>

@@ -2,6 +2,12 @@
 <%@ page import="java.util.*,novNara.*"%>
 <%request.setCharacterEncoding("UTF-8");%>
 <jsp:useBean id="mMgr" class="novNara.MemberMgr" />
+<%
+		if(session.getAttribute("idKey")==null){
+			response.sendRedirect("../login/login.jsp");
+			return;
+		}
+%>
 <html>
 <head>
 <title>회원수정</title>

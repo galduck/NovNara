@@ -12,6 +12,11 @@
 <nav class="giant-box">
     <div class="oatmeal-box">
         <div class="nav-icons">
+        	<div>
+       			<a href="../notice/noticeList.jsp">
+					<i class="fas fa-bullhorn fa-lg"></i>
+       			</a>
+       		</div>
        		<div>
        			<a href="../qna/qnaList.jsp">
        				<i class="fas fa-question-circle fa-lg"></i>
