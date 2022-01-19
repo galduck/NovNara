@@ -31,6 +31,8 @@
 </head>
 <body  topmargin="100">
 <%@ include file="../top.jsp" %>
+<div align="center"><br>
+<h2 class="h1_title">장바구니</h2><br>
 <div class="table_div">
 <table width="75%" align="center" >
 <tr>
@@ -102,6 +104,7 @@
 <form name="orderFrm" method="post" action="../payment/payForm.jsp" >
 	<input type="hidden" name="totalPrice">
 </form>	
+</div>
 </div>
 	<%@ include file="../bottom.jsp" %>
 </body>
