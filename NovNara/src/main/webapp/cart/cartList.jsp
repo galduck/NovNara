@@ -96,7 +96,7 @@
 </td>
 </tr>
 </table>
-<form name="detail" method="post" action="productDetail.jsp" >
+<form name="detail" method="post" action="../product/productDetail.jsp" >
 	<input type="hidden" name="no">
 </form>	
 <form name="orderFrm" method="post" action="../payment/payForm.jsp" >
