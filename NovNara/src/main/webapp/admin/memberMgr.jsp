@@ -17,7 +17,7 @@
 	<td align="center">
 
 		<table width="95%" align="center">
-		<tr align="center"> 
+		<tr align="center" bgcolor="#EAE1D8"> 
 			<td class="table_td">회원이름</td>
 			<td class="table_td">회원아이디</td>
 			<td class="table_td">패스워드</td>

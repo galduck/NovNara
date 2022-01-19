@@ -17,9 +17,9 @@
 <td align="center">
 
 	<table width="95%" align="center">
-	<tr  align="center"> 
+	<tr  align="center" bgcolor="#EAE1D8"> 
 		<td class="table_td">주문번호</td>
-		<td class="table_td">주문자<td>
+		<td class="table_td">주문자</td>
 		<td class="table_td">제품명</td>
 		<td class="table_td">주문수량</td>
 		<td class="table_td">주문날짜</td>

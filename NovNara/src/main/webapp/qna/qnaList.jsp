@@ -135,7 +135,7 @@
 				}else{
 		%>
 			<table cellspacing="0">
-				<tr bgcolor="#D0D0D0">
+				<tr bgcolor="#EAE1D8">
 					<th  class="table_td" width="100">번 호</th>
 					<th  class="table_td" width="250">제 목</th>
 					<th  class="table_td" width="100">아이디</th>

@@ -15,7 +15,7 @@
 	<tr>
 		<td align="center">
 		<table width="95%" align="center">
-			<tr  align="center">
+			<tr  bgcolor="#EAE1D8" align="center">
 				<td class="table_td">구분</td>
 				<td class="table_td">이름</td>
 				<td class="table_td">가격</td>

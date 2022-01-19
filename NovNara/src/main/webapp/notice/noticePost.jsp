@@ -1,7 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.*,novNara.*"%>
 <jsp:useBean id="mMgr" class="novNara.MemberMgr" />
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,14 +11,13 @@
 	<%@ include file="../top.jsp" %>
 
 <%
-	String writeNotice="";
-	if(id != "admin") writeNotice ="<a href=../notice/noticeList.jsp>공지작성은 관리자 권한입니다</a>";
-	else writeNotice = "<a href=../notice/noticePost.jsp>.</a>";
+	if(!id.equals("admin")){
 %>
+<h3 align="center"> 공지 작성은 관리자 권한입니다. </h3>
+<% } else { %>
 <div class="table_title">
 <h3 class="h1_title">Notice</h3>
 <div align="center">
-
 <form name="postFrm" method="post" action="noticePost" 
 enctype="multipart/form-data">
 
@@ -74,6 +72,7 @@ enctype="multipart/form-data">
 <input type="hidden" name="ip" value="<%=request.getRemoteAddr()%>">
 </form>
 </div>
+<% } %>
 	<%@ include file="../bottom.jsp" %>
 
 </body>

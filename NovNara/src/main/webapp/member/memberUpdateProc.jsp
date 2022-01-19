@@ -3,7 +3,8 @@
 <jsp:useBean id="mMgr" class="novNara.MemberMgr" />
 <jsp:useBean id="mBean" class="novNara.MemberBean" />
 <jsp:setProperty name="mBean" property="*" />
-<%boolean flag = mMgr.updateMember(mBean);
+<%
+boolean flag = mMgr.updateMember(mBean);
 if(flag){%>
 	<script>
 		alert("성공적으로 수정하였습니다");
