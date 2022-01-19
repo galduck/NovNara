@@ -75,6 +75,8 @@ function idCheck(id){
 	}
 }
 
+
+
 function zipCheck(){
 		url="zipSearch.jsp?search=n";
 		window.open(url,"post","toolbar=no ,width=500 ,height=300 ,directories=no,status=yes,scrollbars=yes,menubar=no");

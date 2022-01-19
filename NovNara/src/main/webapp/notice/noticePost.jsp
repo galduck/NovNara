@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.*,novNara.*"%>
 <jsp:useBean id="mMgr" class="novNara.MemberMgr" />
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,15 +10,19 @@
 </head>
 <body>
 	<%@ include file="../top.jsp" %>
-	<%
-		MemberBean mBean = mMgr.getMember(id);
-	%>
+
+<%
+	String writeNotice="";
+	if(id != "admin") writeNotice ="<a href=../notice/noticeList.jsp>공지작성은 관리자 권한입니다</a>";
+	else writeNotice = "<a href=../notice/noticePost.jsp>.</a>";
+%>
 <div class="table_title">
 <h3 class="h1_title">Notice</h3>
 <div align="center">
 
 <form name="postFrm" method="post" action="noticePost" 
 enctype="multipart/form-data">
+
 <table width="600" cellpadding="3" align="center">
 	<tr>
 		<td class="table_td"  align=center>
@@ -25,7 +30,7 @@ enctype="multipart/form-data">
 			<tr>
 				<td class="table_td"  width="15%">아이디</td>
 				<td class="table_td"  width="90%">
-				<input name="name" size="10" maxlength="8"></td>
+				관리자</td>
 			</tr>
 			<tr>
 				<td class="table_td" >제 목</td>
