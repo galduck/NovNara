@@ -31,12 +31,12 @@
 		재 고 : <%=UtilMgr.intFormat(product.getStock())%>
 		</div>
 		<div class="table_td detail_margin">					
-		상세설명 :
+		
 		<pre><%=product.getDetail()%></pre>
 		</div>
 		<div class="table_td">		
-		<a href="javascript:productUpdate('<%=product.getNo()%>')">수정하기</a>&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="javascript:productDelete('<%=product.getNo()%>')">삭제하기</a>
+		<a href="javascript:productUpdate('<%=product.getNo()%>')" class="btn" >수정하기</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="javascript:productDelete('<%=product.getNo()%>')" class="btn" >삭제하기</a>
 		</div>				
 		<%@ include file="../bottom.jsp"%>
 	</div>

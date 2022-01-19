@@ -75,20 +75,18 @@
 	}
 </script>
 </head>
-<body bgcolor="#FFFFCC">
+<body >
 	<%@ include file="../top.jsp" %>
-<br/><br/>
+<div align="center">
+<h3 class="h1_title">Q&A 읽기</h3>
 <table align="center" width="600" cellspacing="3">
- <tr>
-  <td  class="table_td" bgcolor="#9CA2EE" height="25" align="center">글읽기</td>
- </tr>
  <tr>
   <td  class="table_td" colspan="2">
    <table cellpadding="3" cellspacing="0" width="100%"> 
     <tr> 
-  <td  class="table_td" align="center" bgcolor="#DDDDDD" width="10%"> 이 름 </td>
+  <td  class="table_td" align="center" bgcolor="#DDDDDD" width="15%"> 이 름 </td>
   <td  class="table_td" bgcolor="#FFFFE8"><%=name%></td>
-  <td  class="table_td" align="center" bgcolor="#DDDDDD" width="10%"> 등록날짜 </td>
+  <td  class="table_td" align="center" bgcolor="#DDDDDD" width="15%"> 등록날짜 </td>
   <td  class="table_td" bgcolor="#FFFFE8"><%=regdate%></td>
  </tr>
  <tr> 
@@ -185,8 +183,9 @@
   </td>
  </tr>
 </table>
+</div>
 <form method="post" name="downFrm" action="../qna/qnaDownload.jsp">
-	<input  class="table_td" type="hidden" name="filename">
+	<input type="hidden" name="filename">
 </form>
 
 <form name="listFrm">

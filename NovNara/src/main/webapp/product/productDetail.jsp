@@ -31,10 +31,6 @@
 </div>
 </div>
 
-
-
-
-
 		<input type="hidden" name="productNo" value="<%=pbean.getNo()%>">	
 		<input type="hidden" name="flag" value="insert">			
 </form>

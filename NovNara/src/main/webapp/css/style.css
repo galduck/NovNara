@@ -4,6 +4,10 @@
 @import "variables.css";
 
 
+/* components */
+@import "components/top.css";
+@import "components/bottom.css";
+
 /* Screens */
 @import "screens/member.css";
 @import "screens/product.css";
@@ -12,9 +16,6 @@
 @import "screens/orderList.css";
 
 
-/* components */
-@import "components/top.css";
-@import "components/bottom.css";
 /* set as a default */
 
 

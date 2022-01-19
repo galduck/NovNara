@@ -43,10 +43,6 @@ img{
     cellspacing : 0px;
 }
 
-
-
-
-
 .super_div{
 	display: flex;
 	justify-content: center;
@@ -65,9 +61,15 @@ img{
 
 .detail_margin{
 	margin: 30px 10px;
-	
 }
 
 .pd_img{
 	margin: 30px 10px;
+}
+
+.pd_detail{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }

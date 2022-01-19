@@ -17,13 +17,13 @@
 		String id = request.getParameter("id");
 		MemberBean mBean = mMgr.getMember(id);
 	%>
-<div class="giant-box" >
-<h3 class="h1_title"><%=mBean.getId()%> 회원님의 정보를 수정합니다.</h3>
+	<h3 class="h1_title table_title"><%=mBean.getId()%> 회원님의 정보를 수정합니다.</h3>
 	<form name="regForm" method="post" action="../admin/memberUpdateProc.jsp">
-		<table width="75%" align="center">
+	<div class="table_div">
+		<table  align="center">
 			<tr>
 				<td  class="table_td" align="center" >
-					<table width="95%" align="center"  border="1">
+					<table align="center"  border="1">
 
 						<tr>
 							<td class="table_td" >아이디</td>

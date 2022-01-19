@@ -39,11 +39,7 @@
 	</div>
 </form>
 </div>
-<div>
-	<div></div>
-	<span>Or</span>
-	<div></div>
-</div>
+
 	<%@ include file="../bottom.jsp"%>
 </body>
 </html>

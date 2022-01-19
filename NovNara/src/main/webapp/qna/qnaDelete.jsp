@@ -66,9 +66,9 @@
 						</tr>
 						<tr>
 							<td  class="table_td" align="center">
-								<input type="button" value="삭제완료" onClick="check()"> 
-								<input type="reset" value="다시쓰기">
-								<input type="button" value="뒤로" onClick="history.go(-1)">
+								<input class="btn" type="button" value="삭제완료" onClick="check()"> 
+								<input class="btn" type="reset" value="다시쓰기">
+								<input class="btn" type="button" value="뒤로" onClick="history.go(-1)">
 							</td>
 						</tr>
 					</table>

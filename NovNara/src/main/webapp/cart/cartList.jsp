@@ -88,7 +88,7 @@
 				총 주문금액 : <%=UtilMgr.monFormat(totalPrice)%>원	
 			</td>
 			<td class="table_td" align="center">
-				<button onclick="sendPay('<%=totalPrice%>')">주문하기</button>
+				<button class="btn" onclick="sendPay('<%=totalPrice%>')">주문하기</button>
 			</td>
 		</tr>
 		<%}//--fi-else %>
