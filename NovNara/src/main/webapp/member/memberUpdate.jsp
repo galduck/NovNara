@@ -10,7 +10,7 @@
 %>
 <html>
 <head>
-<title>회원수정</title>
+<title>NovNara</title>
 <link rel="stylesheet" href="../css/style.css" />
 <script src="script.js"></script>
 </head>
@@ -28,7 +28,7 @@
 	<div class="big-sign-up-box">
 		<div class="sign-up-box">
 		    <h3 class="sign-up">아이디</h3>
-		    <%=mBean.getId()%>
+		    <h3 class="sign-up" padding="0px 10px"><%=mBean.getId()%></h3>
 		</div>
 		
 		<div class="sign-up-box">
@@ -38,7 +38,7 @@
 	
 		<div class="sign-up-box">
 	    <h3 class="sign-up">이메일</h3>
-	    <input name="email" class="input" size="30"
+	    <input class="sign-up input" name="email" class="input" size="15"
 								value="<%=mBean.getEmail()%>">
 		</div>
 	
