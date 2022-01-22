@@ -16,7 +16,19 @@
 <title>NovNara</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css">
 </head>
-<body bgcolor="#FFFFCC">
+<body>
+	<%@ include file="../top.jsp" %>
+
+<% if(id == null){ %>
+<h3 align="center"> 공지 작성은 관리자 권한입니다. </h3>
+
+<%
+	}else if(!id.equals("admin")){
+%>
+<h3 align="center"> 공지 작성은 관리자 권한입니다. </h3>
+<% } else { %>	
+	
+	
 <div align="center">
 <br><br>
  <table width="600" cellpadding="3">
@@ -74,5 +86,8 @@
  <input type="hidden" name="depth" value="<%=bean.getDepth()%>">
 </form> 
 </div>
+<%} %>
+	<%@ include file="../bottom.jsp" %>
+
 </body>
 </html>
