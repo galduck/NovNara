@@ -1,4 +1,3 @@
-<!-- list.jsp -->
 <%@page import="novNara.NoticeBean"%>
 <%@page import="java.util.Vector"%>
 <%@page import="novNara.NoticeUtilMgr"%>
@@ -136,7 +135,7 @@
 				<tr bgcolor="#EAE1D8">
 					<th class="table_td" width="100">번 호</th>
 					<th class="table_td" width="250">제 목</th>
-					<th class="table_td" width="100">아이디</th>
+					<th class="table_td" width="100">작성자</th>
 					<th class="table_td" width="150">날 짜</th>
 					<th class="table_td" width="100">조회수</th>
 				</tr>
@@ -162,7 +161,7 @@
 						<%}%>
 						
 					</td>
-					<td class="table_td"><%=name%></td>
+					<td class="table_td">관리자</td>
 					<td class="table_td"><%=regdate%></td>
 					<td class="table_td"><%=count%></td>
 				</tr>

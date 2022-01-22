@@ -50,14 +50,14 @@
 <body>
 	<%@ include file="../top.jsp" %>
 <div align="center">
-<h3 class="h1_title">Notice</h3>
+<h3 class="h1_title">공지사항</h3>
 <table align="center" width="600" cellspacing="3">
  <tr>
   <td class="table_td"  colspan="2">
    <table cellpadding="3" cellspacing="0" width="100%"> 
     <tr> 
-  <td class="table_td"  align="center" bgcolor="#DDDDDD" width="15%"> 이 름 </td>
-  <td class="table_td"  ><%=name%></td>
+  <td class="table_td"  align="center" bgcolor="#DDDDDD" width="15%">작성자</td>
+  <td class="table_td"  >관리자</td>
   <td class="table_td"  align="center" bgcolor="#DDDDDD" width="15%"> 등록날짜 </td>
   <td class="table_td" ><%=regdate%></td>
  </tr>

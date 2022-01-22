@@ -12,7 +12,7 @@
 %>
 <html>
 <head>
-<title>JSP Notice</title>
+<title>NovNara</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css">
 <script>
 	function check() {
@@ -35,10 +35,8 @@
   <td class="table_td" >
    <table>
     <tr>
-     <td class="table_td" width="20%">성 명</td>
-     <td class="table_td" width="80%">
-	  <input name="name" value="<%=name%>" size="30" maxlength="20">
-	 </td>
+     <td class="table_td" width="20%">작성자</td>
+     <td class="table_td" width="80%">관리자</td>
 	</tr>
 	<tr>
      <td class="table_td" >제 목</td>

@@ -13,7 +13,7 @@
 %>
 <html>
 <head>
-<title>JSPNotice</title>
+<title>NovNara</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body bgcolor="#FFFFCC">
@@ -30,9 +30,9 @@
   <td>
    <table>
     <tr>
-     <td width="20%">성 명</td>
+     <td width="20%">작성자</td>
      <td width="80%">
-	  <input name="name" size="30" maxlength="20"></td>
+	  관리자</td>
     </tr>
     <tr>
      <td>제 목</td>

@@ -16,7 +16,7 @@
 <h3 align="center"> 공지 작성은 관리자 권한입니다. </h3>
 <% } else { %>
 <div class="table_title">
-<h3 class="h1_title">Notice</h3>
+<h3 class="h1_title">공지사항</h3>
 <div align="center">
 <form name="postFrm" method="post" action="noticePost" 
 enctype="multipart/form-data">
@@ -26,7 +26,7 @@ enctype="multipart/form-data">
 		<td class="table_td"  align=center>
 		<table align="center">
 			<tr>
-				<td class="table_td"  width="15%">아이디</td>
+				<td class="table_td"  width="15%">작성자</td>
 				<td class="table_td"  width="90%">
 				관리자</td>
 			</tr>
