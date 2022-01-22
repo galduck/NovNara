@@ -56,17 +56,17 @@
   <td class="table_td"  colspan="2">
    <table cellpadding="3" cellspacing="0" width="100%"> 
     <tr> 
-  <td class="table_td"  align="center" bgcolor="#DDDDDD" width="15%">작성자</td>
+  <td class="table_td"  align="center" bgcolor="#EAE1D8" width="15%">작성자</td>
   <td class="table_td"  >관리자</td>
-  <td class="table_td"  align="center" bgcolor="#DDDDDD" width="15%"> 등록날짜 </td>
+  <td class="table_td"  align="center" bgcolor="#EAE1D8" width="15%"> 등록날짜 </td>
   <td class="table_td" ><%=regdate%></td>
  </tr>
  <tr> 
-    <td class="table_td"  align="center" bgcolor="#DDDDDD"> 제 목</td>
+    <td class="table_td"  align="center" bgcolor="#EAE1D8"> 제 목</td>
     <td class="table_td"  colspan="3"><%=subject%></td>
    </tr>
    <tr> 
-     <td class="table_td"  align="center" bgcolor="#DDDDDD">첨부파일</td>
+     <td class="table_td"  align="center" bgcolor="#EAE1D8">첨부파일</td>
      <td class="table_td"  colspan="3">
     	<%if(filename!=null&&!filename.equals("")){%>
     	 <a href="javascript:down('<%=filename%>')"><%=filename%></a>
