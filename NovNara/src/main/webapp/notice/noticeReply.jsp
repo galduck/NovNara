@@ -27,15 +27,8 @@
 %>
 <h3 align="center"> 공지 작성은 관리자 권한입니다. </h3>
 <% } else { %>	
-	
-	
 <div align="center">
-<br><br>
- <table width="600" cellpadding="3">
-  <tr>
-   <td bgcolor="#CCCC00" height="21" align="center">답변하기</td>
-  </tr>
-</table>
+<h3 class="h1_title">답변하기</h3>
 <form method="post" action="NoticeReply" >
 <table width="600" cellpadding="7">
  <tr>
@@ -70,9 +63,9 @@
     </tr>
 	<tr> 
      <td colspan="2">
-	  <input type="submit" value="답변등록" >
-      <input type="reset" value="다시쓰기">
-      <input type="button" value="뒤로" onClick="history.back()"></td>
+	  <input class="btn" type="submit" value="답변등록" >
+      <input class="btn"  type="reset" value="다시쓰기">
+      <input class="btn"  type="button" value="뒤로" onClick="history.back()"></td>
     </tr> 
    </table>
   </td>
