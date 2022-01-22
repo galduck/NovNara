@@ -9,9 +9,11 @@
 </head>
 <body>
 	<%@ include file="../top.jsp" %>
+<% if(id == null){ %>
+<h3 align="center"> 공지 작성은 관리자 권한입니다. </h3>
 
 <%
-	if(!id.equals("admin")){
+	}else if(!id.equals("admin")){
 %>
 <h3 align="center"> 공지 작성은 관리자 권한입니다. </h3>
 <% } else { %>
