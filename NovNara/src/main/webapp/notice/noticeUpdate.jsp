@@ -35,8 +35,6 @@
 %>
 <h3 align="center"> 공지 작성은 관리자 권한입니다. </h3>
 <% } else { %>	
-	
-	
 <div align="center">
 <h3 class="h1_title">수정하기</h3>
 <form name="updateFrm" method="post" action="noticeUpdate" enctype="multipart/form-data">
